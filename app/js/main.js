@@ -1,1 +1,7 @@
-angular.module('ccApp', []);
+angular.module('ccApp', ['ngRoute'])
+    .config(function ($routeProvider) {
+        $routeProvider.otherwise({
+            redirectTo: '/'
+        });
+    })
+    ;
