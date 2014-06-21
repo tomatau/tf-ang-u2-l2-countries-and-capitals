@@ -15,10 +15,9 @@ var roots = {
 /**
  * SCRIPTS
  */
-console.log(paths.bootstrap)
 // sass --style expanded --update ./app/css/style.scss:./app/css/style.css
 gulp.task('styles', [], function(){
-    gulp.src(paths.scss)
+    return gulp.src(paths.scss)
         .pipe(sass({
             errLogToConsole: true
             ,includePaths: [
