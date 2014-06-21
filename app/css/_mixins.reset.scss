@@ -1,0 +1,70 @@
+@mixin reset-fixes {
+    code, kbd, pre, samp {
+        font-family: monospace, monospace;
+        font-size: 1em;
+    }
+    body {
+        line-height: 1.3;
+        margin: 0;
+    }
+    blockquote, q {
+        quotes: none;
+        font: {
+            style: italic;
+        }
+        &:before, &:after {
+            content: "";
+            content: none;
+        }
+    }
+    table {
+        width: 100%;
+        border: {
+            collapse: collapse;
+            spacing: 0;
+        }
+    }
+    ul, ol {
+        list-style-position: inside;
+    }
+    li ul,
+    li ol {
+        margin-left: 1em;
+    }
+}
+
+@mixin reset-box-model {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+@mixin reset-font {
+    font-size: 100%;
+    font: inherit;
+    text-align: left;
+}
+
+@mixin reset-global {
+    html, body, div, span, applet, object, iframe,
+    center, dl, dt, dd, ol, ul, li,
+    fieldset, form, img, datalist, keygen,
+    select, input, textarea, button,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, footer, header, hgroup,
+    menu, nav, output, ruby, section, audio, video,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, ins, kbd, q, s, samp,
+    small, strike, strong, tt, var,
+    b, u, i, figcaption, summary, time, mark,
+    label, legend,
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+        @include reset-box-model;
+        @include reset-font;
+    }
+    @include reset-fixes;
+}

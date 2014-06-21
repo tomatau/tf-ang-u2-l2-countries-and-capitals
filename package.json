@@ -4,7 +4,7 @@
   "description": "Thinkful curriculum Angular Development curriculum, unit 2 lesson 2 assignment 3 application",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tomatau/tf-ang-u2-l2-countries-and-capitals",
   "dependencies": {
-    "gulp": "^3.8.1"
+    "gulp": "^3.8.1",
+    "gulp-sass": "^0.7.2"
   }
 }
