@@ -1,0 +1,27 @@
+{
+  "name": "countries-and-capitals",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tomatau/tf-ang-u2-l2-countries-and-capitals",
+  "authors": [
+    "Thomas Hudspith-Tatham <iammotivated@gmail.com>"
+  ],
+  "description": "Thinkful curriculum Angular Development curriculum, unit 2 lesson 2 assignment 3 application",
+  "main": "app/index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.18",
+    "angular-route": "~1.2.18",
+    "angular-animate": "~1.2.18"
+  }
+}
