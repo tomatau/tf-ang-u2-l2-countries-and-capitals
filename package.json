@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tomatau/tf-ang-u2-l2-countries-and-capitals/issues"
   },
-  "homepage": "https://github.com/tomatau/tf-ang-u2-l2-countries-and-capitals"
+  "homepage": "https://github.com/tomatau/tf-ang-u2-l2-countries-and-capitals",
+  "dependencies": {
+    "gulp": "^3.8.1"
+  }
 }
