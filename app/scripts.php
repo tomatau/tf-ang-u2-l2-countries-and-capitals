@@ -6,6 +6,7 @@
 <!-- build:js ./js/js.js -->
 <script type="text/javascript" src="./js/main.js"></script>
 <script type="text/javascript" src="./js/intro/intro.js"></script>
-<script type="text/javascript" src="./js/list/list.js"></script>
-
+<script type="text/javascript" src="./js/countries/list.js"></script>
+<script type="text/javascript" src="./js/entities/countries.js"></script>
+<script type="text/javascript" src="./js/geonames/gateway.js"></script>
 <!-- endbuild -->
