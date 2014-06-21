@@ -1,7 +1,6 @@
-<div class="wrapper">
+<div class="container">
     <header>
         <nav>
-            
         </nav>
         <h1>Countries &amp; Capitals</h1>
     </header>

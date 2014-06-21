@@ -4,23 +4,28 @@ var gulp = require('gulp')
 
 var roots = {
         app: './app'
+        ,bower: './bower_components'
     },
     paths = {
-        css : roots.app + '/css', 
-        scss : roots.app + '/css/scss/style.scss'
+        css : roots.app + '/css'
+        ,scss : roots.app + '/css/scss/style.scss'
+        ,bootstrap : roots.bower + '/bootstrap-sass-official/vendor/assets/stylesheets'
     };
 
 /**
  * SCRIPTS
  */
-
+console.log(paths.bootstrap)
 // sass --style expanded --update ./app/css/style.scss:./app/css/style.css
 gulp.task('styles', [], function(){
     gulp.src(paths.scss)
         .pipe(sass({
-            errLogToConsole: true,
+            errLogToConsole: true
+            ,includePaths: [
+                paths.bootstrap
+            ]
             // compressed, nested (compact)
-            outputStyle: 'expanded'
+            ,outputStyle: 'expanded'
         }))
         .pipe(
             gulp.dest(paths.css)
