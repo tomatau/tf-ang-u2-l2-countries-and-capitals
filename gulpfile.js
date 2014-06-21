@@ -7,7 +7,7 @@ var roots = {
     },
     paths = {
         css : roots.app + '/css', 
-        scss : roots.app + '/css/style.scss'
+        scss : roots.app + '/css/scss/style.scss'
     };
 
 /**
