@@ -5,6 +5,7 @@ angular.module('geonames')
 
     .factory('capitalRequest', 
         function( gateway, CAPITALINFO, $q, countriesEntity ){
+            
             return function(country){
                 var def = $q.defer(),
                     countryInfo = countriesEntity.find(country),

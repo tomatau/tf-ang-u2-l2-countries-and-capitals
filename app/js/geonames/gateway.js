@@ -6,9 +6,8 @@
     angular.module('geonames', [ 'entities' ])
         .constant('GEOAPI', apiRoot)
         .constant('GEOURL', geoRoot)
-
-        // .constant('NEIGHBOURS', apiRoot + 'neighboursJSON')
-        // .constant('FLAGS', geoRoot + '/flags/x/{{ code }}.gif')
+        .constant('FLAG', geoRoot + 'flags/x/{{ code | lowercase }}.gif')
+        .constant('MAP', geoRoot + 'img/country/250/{{ code | uppercase }}.png')
 
         .factory('gateway', function($http){
             return function(url, params){

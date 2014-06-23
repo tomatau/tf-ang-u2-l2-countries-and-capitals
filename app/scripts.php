@@ -9,6 +9,7 @@
 <script src="./js/geonames/gateway.js"></script>
 <script src="./js/geonames/countryList.js"></script>
 <script src="./js/geonames/capitalInfo.js"></script>
+<script src="./js/geonames/neighborsList.js"></script>
 <script src="./js/intro/intro.js"></script>
 <script src="./js/countries/list.js"></script>
 <script src="./js/countries/country.js"></script>

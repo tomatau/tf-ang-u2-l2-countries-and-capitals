@@ -5,6 +5,7 @@ angular.module('geonames')
 
     .factory('countryListRequest', 
         function( gateway, COUNTRYINFO, $q, countriesEntity ){
+            
             return function(params){
                 var def = $q.defer();
                 gateway(COUNTRYINFO, params)

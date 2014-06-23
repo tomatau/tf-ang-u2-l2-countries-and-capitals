@@ -15,7 +15,14 @@
     <dd>{{ country.capitalData.population }}</dd>
 
     <dt>Neighbors</dt>
-    <dd>{{  }}</dd>
+    <dd>
+        <p ng-repeat="n in country.neighbors">
+            <a ng-href="{{ countryUrl(n.countryCode) }}">{{ n.countryName }}</a>
+        </p>
+    </dd>
+    <img ng-src="{{ mapUrl(country.countryCode) }}" alt="{{country.countryName }}'s map">
+    <img ng-src="{{ flagUrl(country.countryCode) }}" alt="{{country.countryName }}'s flag">
 </dl>
 
 <a href="./#">Home</a>
+<a href="./#/countries">Browse Countries</a>

@@ -12,7 +12,10 @@ angular.module('ccApp')
             }
         })
     })
-    .controller('ListCtrl', function($scope, countries){
+    .controller('ListCtrl', function($scope, countries, $location){
         $scope.countryList = countries.get();
+        $scope.goToCountry = function(countryCode){
+            $location.path('countries/' + countryCode);
+        }
     })
     ;

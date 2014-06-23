@@ -12,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="c in countryList">
+        <tr ng-repeat="c in countryList" ng-click="goToCountry(c.countryCode)">
             <td>{{ c.countryName }}</td>
             <td>{{ c.countryCode }}</td>
             <td>{{ c.capital }}</td>

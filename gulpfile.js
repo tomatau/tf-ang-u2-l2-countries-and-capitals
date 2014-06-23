@@ -15,18 +15,13 @@ var roots = {
 /**
  * SCRIPTS
  */
-// sass --style expanded --update ./app/css/style.scss:./app/css/style.css
+// sass --style expanded --update ./app/css/style.scss:./app/css/style.css // compressed, nested (compact)
 gulp.task('styles', [], function(){
     return gulp.src(paths.scss)
         .pipe(sass({
             errLogToConsole: true
-            ,includePaths: [
-                paths.bootstrap
-            ]
-            // compressed, nested (compact)
+            ,includePaths: [ paths.bootstrap ]
             ,outputStyle: 'expanded'
         }))
-        .pipe(
-            gulp.dest(paths.css)
-        );
+        .pipe( gulp.dest(paths.css) );
 });
