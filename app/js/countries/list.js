@@ -4,18 +4,15 @@ angular.module('ccApp')
             templateUrl: './js/countries/list.html',
             controller: 'ListCtrl',
             resolve: { 
-                countries: ['countryInfoRequest', 
-                    function(countryInfoRequest){
+                countries: ['countryListRequest', 
+                    function(countryListRequest){
                         // promise resolves to the countriesEntity
-                        return countryInfoRequest();
+                        return countryListRequest();
                     }]
             }
         })
     })
     .controller('ListCtrl', function($scope, countries){
-        // console.log(countries.get())
         $scope.countryList = countries.get();
-        // countries.then(function(){
-        //     console.log(arguments);
-        // })
-    });
+    })
+    ;
