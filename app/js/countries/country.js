@@ -1,16 +1,21 @@
 angular.module('ccApp')
-    .constant('COUNTRYURL', '#/countries/{{ code }}')
+    .constant('COUNTRYURL', '/countries/{{ code }}')
     .config(function($routeProvider){
         $routeProvider.when('/countries/:country', {
             templateUrl: './js/countries/country.html',
             controller: 'CountryCtrl',
             resolve: { 
-                // could be built into 1 service
-                country: [ 'countryListRequest', 'capitalRequest', 'neighborsListRequest', '$route',
+                // todo: build into 1 service
+                country: [ 
+                    'countryListRequest',
+                    'capitalRequest',
+                    'neighborsListRequest', 
+                    '$route',
                     function(countryListRequest, capitalRequest, neighborsListRequest, $route){
                         var cntry = $route.current.params.country;
 
-                        return countryListRequest() // make sure we have all countries
+                        // make sure we have all countries
+                        return countryListRequest()
                             // decorate request country with capital and neighbors 
                             .then(function(){
                                 return capitalRequest(cntry)
@@ -21,7 +26,7 @@ angular.module('ccApp')
                             .then(function(country){
                                 return neighborsListRequest(cntry)
                                     .then(function(country){
-                                        return country; // FINAL RETURN
+                                        return country; // resolves return
                                     })
                             });
                     }]
@@ -30,14 +35,11 @@ angular.module('ccApp')
     })
     .controller('CountryCtrl', function($scope, country, $interpolate, FLAG, MAP, COUNTRYURL){
         $scope.country = country;
-        $scope.countryUrl = function(code){
-            return $interpolate(COUNTRYURL)({ code: code });
-        };
-        $scope.flagUrl = function(code){
-            return $interpolate(FLAG)({ code: code });
-        };
-        $scope.mapUrl = function(code){
-            return $interpolate(MAP)({ code: code });
-        };
+        function goTo(url, countryCode){
+            return $interpolate(url)({ code: countryCode });
+        }
+        $scope.countryUrl = goTo.bind(this, COUNTRYURL);
+        $scope.flagUrl = goTo.bind(this, FLAG);
+        $scope.mapUrl = goTo.bind(this, MAP);
     })
     ;

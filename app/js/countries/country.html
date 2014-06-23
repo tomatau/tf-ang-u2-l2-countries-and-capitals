@@ -17,11 +17,14 @@
     <dt>Neighbors</dt>
     <dd>
         <p ng-repeat="n in country.neighbors">
-            <a ng-href="{{ countryUrl(n.countryCode) }}">{{ n.countryName }}</a>
+            <a ng-href="#{{ countryUrl(n.countryCode) }}">{{ n.countryName }}</a>
         </p>
     </dd>
-    <img ng-src="{{ mapUrl(country.countryCode) }}" alt="{{country.countryName }}'s map">
-    <img ng-src="{{ flagUrl(country.countryCode) }}" alt="{{country.countryName }}'s flag">
+    <dt></dt>
+    <dd>
+        <img ng-src="{{ mapUrl(country.countryCode) }}" alt="{{country.countryName }}'s map">
+        <img ng-src="{{ flagUrl(country.countryCode) }}" alt="{{country.countryName }}'s flag">
+    </dd>
 </dl>
 
 <a href="./#">Home</a>
