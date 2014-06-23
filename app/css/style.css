@@ -4554,3 +4554,7 @@ dl dt {
   text-align: right; }
 dl dd p {
   display: inline; }
+
+img {
+  width: 49%;
+  text-align: center; }

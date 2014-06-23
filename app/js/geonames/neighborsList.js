@@ -9,7 +9,7 @@ angular.module('geonames')
             return function(country){
                 var def = $q.defer()
                     ,countryInfo = countriesEntity.find(country)
-                    params = {
+                    ,params = {
                         geonameId: countryInfo.geonameId
                     }
                 ;

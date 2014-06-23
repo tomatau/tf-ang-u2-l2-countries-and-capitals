@@ -7,9 +7,9 @@ angular.module('geonames')
         function( gateway, CAPITALINFO, $q, countriesEntity ){
             
             return function(country){
-                var def = $q.defer(),
-                    countryInfo = countriesEntity.find(country),
-                    params = {
+                var def = $q.defer()
+                    ,countryInfo = countriesEntity.find(country)
+                    ,params = {
                         country: country,
                         name_equals: countryInfo.capital,
                         type: 'json',
