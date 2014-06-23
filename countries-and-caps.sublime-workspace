@@ -1,0 +1,1750 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"coun",
+				"countryCode"
+			],
+			[
+				"cou",
+				"countryInfo"
+			],
+			[
+				"neigh",
+				"neighborsListRequest"
+			],
+			[
+				"cout",
+				"country"
+			],
+			[
+				"country",
+				"countryEntity"
+			],
+			[
+				"pro",
+				"provider"
+			],
+			[
+				"count",
+				"countryInfoRequest"
+			],
+			[
+				"g",
+				"gateway"
+			],
+			[
+				"geo",
+				"geonames"
+			],
+			[
+				"cop",
+				"copy-html"
+			],
+			[
+				"u",
+				"uglify"
+			],
+			[
+				"mini",
+				"minifyCss"
+			],
+			[
+				"b",
+				"build"
+			],
+			[
+				"dyna",
+				"dynamic"
+			],
+			[
+				"in",
+				"inputsForm"
+			],
+			[
+				"fir",
+				"firebrick"
+			],
+			[
+				"main",
+				"mainColor"
+			],
+			[
+				"ng-e",
+				"ng-enter-active"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"ear",
+				"earningsHistory"
+			],
+			[
+				"ea",
+				"earningsHistory"
+			],
+			[
+				"root",
+				"rootScope"
+			],
+			[
+				"ro",
+				"rootScope"
+			],
+			[
+				"rou",
+				"routeParams"
+			],
+			[
+				"roo",
+				"rootScope"
+			],
+			[
+				"Sett",
+				"SettingsModule"
+			],
+			[
+				"nu",
+				"nums"
+			],
+			[
+				"numb",
+				"numbers"
+			],
+			[
+				"even",
+				"evenFilter"
+			],
+			[
+				"ev",
+				"evenFilter"
+			],
+			[
+				"http",
+				"httpBackend"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"hell",
+				"helloService"
+			],
+			[
+				"pre",
+				"prevv"
+			],
+			[
+				"S",
+				"Something"
+			],
+			[
+				"num",
+				"numberForm"
+			],
+			[
+				"n",
+				"numberForm"
+			],
+			[
+				"get",
+				"getStudents"
+			],
+			[
+				"std",
+				"student"
+			],
+			[
+				"stu",
+				"student"
+			],
+			[
+				"ta",
+				"tasks"
+			],
+			[
+				"asser",
+				"assertListEqual"
+			],
+			[
+				"cl",
+				"class	New Class"
+			],
+			[
+				"Us",
+				"UserSchema"
+			],
+			[
+				"mongo",
+				"MongoDB"
+			],
+			[
+				"meth",
+				"methodOverride"
+			],
+			[
+				"sinon",
+				"sinonChai"
+			],
+			[
+				"defa",
+				"defaults"
+			],
+			[
+				"Vie",
+				"ViewBlog"
+			],
+			[
+				"view",
+				"viewBlog"
+			],
+			[
+				"und",
+				"undefined"
+			],
+			[
+				"def",
+				"defaultTemplate"
+			],
+			[
+				"te",
+				"testScenario"
+			],
+			[
+				"test",
+				"testActor"
+			],
+			[
+				"us",
+				"useCase"
+			],
+			[
+				"req",
+				"request:handler"
+			],
+			[
+				"re",
+				"resps"
+			],
+			[
+				"pub",
+				"publishedValue"
+			],
+			[
+				"tweet",
+				"tweetID"
+			],
+			[
+				"feed",
+				"feedJSON"
+			],
+			[
+				"getT",
+				"getTweetsAPI"
+			],
+			[
+				"loa",
+				"loadingHTML"
+			],
+			[
+				"displ",
+				"displayFeedHTML"
+			],
+			[
+				"set",
+				"setupGame"
+			],
+			[
+				"toggle",
+				"toggleVisible"
+			],
+			[
+				"cla",
+				"class	Attr"
+			],
+			[
+				"data",
+				"dataParams"
+			],
+			[
+				"lis",
+				"listenForSearchSubmit"
+			],
+			[
+				"sear",
+				"searchForFood"
+			],
+			[
+				"sea",
+				"searchForFood"
+			],
+			[
+				"se",
+				"setRandomNumber"
+			],
+			[
+				"make",
+				"makeGuess"
+			],
+			[
+				"gre",
+				"green"
+			],
+			[
+				"ajax",
+				"ajaxOpts"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"Model",
+				"ModelMaps"
+			],
+			[
+				"ren",
+				"rendered"
+			],
+			[
+				"prop",
+				"props"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"undele",
+				"undelegateEvents"
+			],
+			[
+				"arg",
+				"arguments"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"reqi",
+				"require"
+			],
+			[
+				"node",
+				"nodeRequire"
+			],
+			[
+				"base",
+				"baseUrl"
+			],
+			[
+				"require",
+				"requirejs"
+			],
+			[
+				"requir",
+				"requirejs"
+			],
+			[
+				"under",
+				"underscore"
+			],
+			[
+				"Cr",
+				"createContext"
+			],
+			[
+				"create",
+				"createContext"
+			],
+			[
+				"crea",
+				"createContext"
+			],
+			[
+				"func",
+				"functions"
+			],
+			[
+				"login",
+				"loginController"
+			],
+			[
+				"requi",
+				"requirejs"
+			],
+			[
+				"sion",
+				"sinonChai"
+			],
+			[
+				"disable",
+				"disableSubmit"
+			],
+			[
+				"setU",
+				"setupEvents"
+			],
+			[
+				"chan",
+				"changeInput"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/css/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/css/scss/_list.scss",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/js/countries/list.html",
+			"settings":
+			{
+				"buffer_size": 694,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/SASS Build/SASS.sublime-build",
+	"command_palette":
+	{
+		"height": 272.0,
+		"selected_items":
+		[
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"dup",
+				"File: Duplicate"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"rn",
+				"File: Rename"
+			],
+			[
+				"mov",
+				"File: Move"
+			],
+			[
+				"move",
+				"File: Move"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"pa re",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"synt html",
+				"Set Syntax: HTML"
+			],
+			[
+				"emme",
+				"Set Syntax: Emmet"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rev",
+				"File: Reveal"
+			],
+			[
+				"surr",
+				"Surround: change surround"
+			],
+			[
+				"r",
+				"File: Rename"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"handl",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"hand",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"toggle open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"sni",
+				"Snippet: html"
+			],
+			[
+				"snippet",
+				"Snippet: html"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"coffee",
+				"Coffee: Compile File"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"javs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jshint",
+				"JSHint: Set Plugin Options"
+			],
+			[
+				"lint",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"clear",
+				"JSHint: Clear Annotations"
+			],
+			[
+				"reve",
+				"File: Reveal"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"hint",
+				"JSHint: Set Plugin Options"
+			],
+			[
+				"sublint",
+				"Preferences: SublimeLint Settings – Default"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"show",
+				"SublimeLint: Show All Errors"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"sublime",
+				"Preferences: SublimeLint Settings – Default"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"toggle",
+				"View: Toggle Minimap"
+			],
+			[
+				"synt java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"du",
+				"File: Duplicate"
+			],
+			[
+				"synt bla",
+				"Set Syntax: PHP - Laravel Blade"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"synt js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"blad",
+				"Set Syntax: PHP - Laravel Blade"
+			],
+			[
+				"gen v",
+				"Laravel Generate: View"
+			],
+			[
+				"gen vie",
+				"Laravel Generate: View"
+			],
+			[
+				"laravel generat v",
+				"Laravel Generate: View"
+			],
+			[
+				"control",
+				"Laravel Generate: Controller"
+			],
+			[
+				"lar res",
+				"Laravel Generate: Resource"
+			],
+			[
+				"apach",
+				"Set Syntax: Apache Conf"
+			],
+			[
+				"blade",
+				"Set Syntax: PHP - Laravel Blade"
+			],
+			[
+				"modl",
+				"Laravel Generate: Model"
+			],
+			[
+				"model",
+				"Laravel Generate: Model"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"change",
+				"Surround: change surround"
+			],
+			[
+				"select",
+				"Bracketeer: Select Inside Braces"
+			],
+			[
+				"selec",
+				"BracketHighlighter: Select Bracket Content"
+			],
+			[
+				"swap",
+				"BracketHighlighter: Swap Quotes"
+			],
+			[
+				"brack swap",
+				"BracketHighlighter: Swap Quotes"
+			],
+			[
+				"bracketeer",
+				"BracketHighlighter: Swap Quotes"
+			],
+			[
+				"bracket",
+				"Bracketeer: Insert curly brackets"
+			],
+			[
+				"brack",
+				"Bracketeer: Indent Text"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"forma",
+				"Format: Javascript"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"HTM",
+				"Set Syntax: HTML"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"bwp",
+				"Preferences: Browse Packages"
+			],
+			[
+				"ini",
+				"Set Syntax: INI"
+			],
+			[
+				"in",
+				"Set Syntax: INI"
+			],
+			[
+				"instal ",
+				"Package Control: Install Package"
+			],
+			[
+				"syn ba",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"synt bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"sy bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"syn bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"syn bas",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"synt b",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"synt ba",
+				"Set Syntax: Shell Script (Bash)"
+			]
+		],
+		"width": 622.0
+	},
+	"console":
+	{
+		"height": 261.0,
+		"history":
+		[
+			"view.run_command(\"lint\", \"help\")",
+			"view.run_command(\"lint\")",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/node_modules/gulp/node_modules/liftoff/artwork/liftoff-icon.eps",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/bower_components/bootstrap-sass-official/LICENSE",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/body.php",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/main.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/countries/country.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/countries/list.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/intro/intro.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/countries/list.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/countries/country.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/intro/intro.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/entities/countries.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/geonames/gateway.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/entities/capital.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/geonames/capitalInfo.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/geonames/countryList.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/geonames/neighborsList.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/scripts.php",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/gulpfile.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/geonames/countryInfo.js",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/User/JavaScript/clog.sublime-snippet",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/js/list/list.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/README.md",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/css/scss/style.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/head.php",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/node_modules/gulp-sass/node_modules/node-sass/scripts/prepublish",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/node_modules/gulp-sass/node_modules/node-sass/sass_context_wrapper.cpp",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/index.php",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/body.php",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/css/scss/_mixins.reset.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/app/css/_mixins.reset.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/package.json",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/countries-and-capitals/,",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/cities/city.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/owm-app.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/build/_assets/combined.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/home/near-me.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/owm-library.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/owm-app-views.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/home/home.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/gulpfile.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/.gitignore",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/.git/MERGE_MSG",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/build/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/build/_assets/combined-211ad743.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/owm-history.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/package.json",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/build/_assets/combined-f6de768b.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/app/bower_components/angular/angular.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-2/assignment-1/angular-weather-app/build/_assets/combined-484c4a38.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/scripts/main.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/scripts/config.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/node_modules/grunt-contrib-clean/docs/clean-options.md",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/.idea/calculator.iml",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/tmpl/inputs.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/styles/main.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/styles/_mixins.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/styles/_flip.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/node_modules/grunt-bower-install/node_modules/bower-config/node_modules/mout/object/mixIn.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/node_modules/grunt-bower-install/node_modules/bower-config/node_modules/mout/number/MAX_INT.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/tmpl/result.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/styles/main.css",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/scripts/factory.earnings.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/scripts/controller.inputs.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/calculator/app/scripts/controller.result.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/js/app.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/css/style.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/lib/angular-animate/angular-animate.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/lib/angular/angular.js",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/tmpl/city.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/tmpl/home.html",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/open-weather-map/app/tmpl/error.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/settingsModuleSpec.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/settingsModule.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/karma.conf.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/registerModuleSpec.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/registerModule.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/filterModule.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/filterModuleSpec.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/.gitignore",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/helloServiceSpec.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/usernameService.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/usernameServiceSpec.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/components/helloService.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/.bowerrc",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/package.json",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-3/app/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-2/karma.conf.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-2/app/js/appSpec.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-2/app/js/app.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-3/ass-2/package.json",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/app/scripts/something.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/test/spec/test.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/test/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/Gruntfile.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/app/scripts/main.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-2/lesson-1/app/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-4/anim-in-angular/app/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-4/anim-in-angular/app/scripts/js-anim.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-4/anim-in-angular/app/styles/js-anim.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-4/anim-in-angular/app/styles/main.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-4/madlibs/app/styles/main.scss",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-5/instagram/Gruntfile.js",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-5/instagram/app/index.html",
+		"/Users/tomatao/Sites/thinkful/ANG/tomatao/unit-1/lesson-5/instagram/app/styles/main.scss",
+		"/Users/tomatao/Sites/playing/react.js",
+		"/Users/tomatao/Sites/playing/MEAN/app/views/main.html",
+		"/Users/tomatao/Sites/playing/MEAN/app/views/number-inputs.html",
+		"/Users/tomatao/Sites/playing/MEAN/Gruntfile.js",
+		"/Users/tomatao/Sites/playing/MEAN/app/styles/main.scss",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/tomatao/Sites/playing/MEAN/MEAN.sublime-project",
+		"/Users/tomatao/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/tomatao/Sites/thinkful/PIP/unit2/lesson3/ui/test.py",
+		"/Users/tomatao/Sites/thinkful/PIP/unit2/lesson3/.git/MERGE_MSG",
+		"/Users/tomatao/Sites/thinkful/PIP/unit2/lesson3/student_test.py",
+		"/Users/tomatao/Sites/playing/express/test/public/stylesheets/style.scss",
+		"/Users/tomatao/Sites/playing/express/test/public/stylesheets/style.css",
+		"/Users/tomatao/Sites/playing/express/test/routes/users.js",
+		"/Users/tomatao/Sites/playing/express/test/views/index.tmpl",
+		"/Users/tomatao/Sites/playing/express/test/routes/index.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			">\n",
+			"loading",
+			"code",
+			"span",
+			"countries",
+			"countryListRequest",
+			"p>",
+			"p",
+			"countryInfoRequest",
+			"type=\"text/javascript\" ",
+			"countries",
+			"countryFuture",
+			"countryInfo",
+			"urlRoot",
+			"+",
+			"neighbours",
+			"countryInfo",
+			"list",
+			"capitals",
+			"</script>",
+			"button",
+			"intro",
+			"button",
+			"button ",
+			"Capital",
+			"listCtrl",
+			"intro",
+			"js",
+			"route",
+			"angular",
+			"gulp",
+			"/**/*.",
+			"awesome",
+			"font",
+			",  ",
+			"   ",
+			"copy-html",
+			"',",
+			"defaultView",
+			"uglify",
+			"a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[",
+			"eProvider",
+			"debugEnabled = function",
+			"cities",
+			"owmUSCities",
+			"$http(re",
+			"price",
+			"submitted",
+			"firebrick",
+			".ng",
+			"transform",
+			"dev",
+			"<td>",
+			"sm-hide",
+			"</th>",
+			"/th>",
+			"rotateY(-90deg)",
+			"rotateY(",
+			"$r",
+			"$l",
+			"$lP",
+			"$rP",
+			"preserve-3d;",
+			"transform",
+			"earnings",
+			"Earnings",
+			";",
+			"Earnings.",
+			"e",
+			"E",
+			"e",
+			"E",
+			"e",
+			"e.",
+			"$routeChange",
+			"route",
+			"locationChange",
+			"locationChangeStart",
+			"{ ",
+			".animate",
+			"route",
+			"city",
+			"angular",
+			"mocks",
+			"[1,2,3,4]",
+			"components",
+			"angular/",
+			"something",
+			"null",
+			"prev",
+			"ret",
+			"watch",
+			"\n                            connect.static('test'),",
+			"test",
+			"keyframes",
+			"\n            <input type=\"text\" class=\"search\">\n            <button class=\"go\" type=\"submit\">Hit it!</button>\n            ",
+			"number-",
+			"id=\"number",
+			"install",
+			"boot",
+			"Install",
+			"date",
+			"Course()",
+			"self.c",
+			"course",
+			"_courses",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"courses",
+			"getCourses",
+			"self.l",
+			"l",
+			"L",
+			"l",
+			"self.s",
+			"self.students",
+			"self.courses",
+			"courses"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/css/scss/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/css/scss/_list.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/js/countries/list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								60
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 75.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "countries-and-caps.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"list",
+				"app/js/countries/list.html"
+			],
+			[
+				"scrip",
+				"app/scripts.php"
+			],
+			[
+				"scriphp",
+				"app/scripts.php"
+			],
+			[
+				"angu",
+				"app/bower_components/angular/angular.js"
+			],
+			[
+				"ind",
+				"app/index.html"
+			],
+			[
+				"main",
+				"app/scripts/main.js"
+			],
+			[
+				"input",
+				"app/tmpl/inputs.html"
+			],
+			[
+				"mainscs",
+				"app/styles/main.scss"
+			],
+			[
+				"mixins",
+				"app/styles/_mixins.scss"
+			],
+			[
+				"app",
+				"app.js"
+			],
+			[
+				"stylescs",
+				"node_modules/grunt-contrib-connect/node_modules/connect/lib/public/style.css"
+			],
+			[
+				"contex",
+				"app/js/core/startContext.js"
+			],
+			[
+				"core",
+				"app/js/core/core.js"
+			],
+			[
+				"cajon",
+				"test/lib/cajon.js"
+			],
+			[
+				"re",
+				"test/lib/require.js"
+			],
+			[
+				"req",
+				"test/lib/require.js"
+			],
+			[
+				"book",
+				"desire/wanda/use-case/bookkeeper.js"
+			],
+			[
+				"tryer",
+				"desire/wanda/use-case/tryer.js"
+			],
+			[
+				"ui",
+				"desire/wanda/use-case/ui.js"
+			],
+			[
+				"desi",
+				"desire.js"
+			],
+			[
+				"wre",
+				"vendor/backbone/extra/backbone.wreqr.js"
+			],
+			[
+				"marione",
+				"vendor/marionette/components/marionette.helpers.js"
+			],
+			[
+				"marion",
+				"vendor/marionette/components/marionette.application.js"
+			],
+			[
+				"marionmod",
+				"vendor/marionette/components/marionette.module.js"
+			],
+			[
+				"test",
+				"app/scripts/templates/test.ejs"
+			],
+			[
+				"inde",
+				"app/index.html"
+			],
+			[
+				"scss",
+				"app/styles/main.scss"
+			],
+			[
+				"index",
+				"vendor/swiftmailer/swiftmailer/test-suite/lib/simpletest/docs/simpletest.org/index.html"
+			],
+			[
+				"bbvali",
+				"public/js/vendor/backbone/extra/backbone-validation.js"
+			],
+			[
+				"backbone",
+				"public/js/vendor/backbone/backbone.1.1.0.js"
+			],
+			[
+				"tom",
+				"public/js/vendor/tomatao/tomatao.js"
+			],
+			[
+				"backbone.k",
+				"public/js/vendor/backbone/backbone.1.1.0.js"
+			],
+			[
+				"backbonemarionett",
+				"public/js/vendor/marionette/backbone.marionette.1.2.2.js"
+			],
+			[
+				"tsc",
+				"public/js/tscript.js"
+			],
+			[
+				"toma",
+				"public/js/vendor/tomatao/tomatao.js"
+			],
+			[
+				"backmarion",
+				"public/js/vendor/marionette/backbone.marionette.1.2.2.js"
+			],
+			[
+				"backbone.js",
+				"public/js/vendor/backbone/backbone.1.1.0.js"
+			],
+			[
+				"tomatjs",
+				"public/js/vendor/tomatao/tomatao.js"
+			],
+			[
+				"tomamin",
+				"public/js/vendor/tomatao/tomatao.min.js"
+			],
+			[
+				"tomatoind",
+				"app/views/tomatao/index.blade.php"
+			],
+			[
+				"tomatao",
+				"app/views/tomatao.blade.php"
+			],
+			[
+				"backmarmin",
+				"public/js/vendor/marionette/backbone.marionette.1.1.0.min.js"
+			],
+			[
+				"back",
+				"public/js/vendor/backbone/backbone.1.0.0.min.js"
+			],
+			[
+				"loadingcont",
+				"public/js/app/components/loading/controller.js"
+			],
+			[
+				"backbmar",
+				"public/js/vendor/marionette/backbone.marionette.1.1.0.js"
+			],
+			[
+				"homec",
+				"app/controllers/HomeController.php"
+			],
+			[
+				"undersc",
+				"public/js/vendor/underscore/underscore.1.5.2.js"
+			],
+			[
+				"jquery",
+				"public/js/vendor/jquery/jquery.1.10.2.js"
+			],
+			[
+				"func",
+				"public/js/hlpr/functions.js"
+			],
+			[
+				"requir",
+				"public/js/vendor/requirejs/require.2.1.8.js"
+			],
+			[
+				"fun",
+				"public/js/hlpr/functions.js"
+			],
+			[
+				"script",
+				"public/js/script.js"
+			],
+			[
+				"jasm",
+				"public/jasmine.html"
+			],
+			[
+				"formb",
+				"vendor/laravel/framework/src/Illuminate/Html/FormBuilder.php"
+			],
+			[
+				"appli",
+				"public/js/app/extensions/application.js"
+			],
+			[
+				"layout",
+				"app/views/layout.blade.php"
+			],
+			[
+				"init",
+				"public/js/app/inits.js"
+			],
+			[
+				"router",
+				"vendor/laravel/framework/src/Illuminate/Routing/Router.php"
+			],
+			[
+				"route",
+				"vendor/laravel/framework/src/Illuminate/Routing/Route.php"
+			],
+			[
+				"data",
+				"app/config/database.php"
+			],
+			[
+				"viewview",
+				"vendor/laravel/framework/src/Illuminate/View/View.php"
+			],
+			[
+				"envi",
+				"vendor/laravel/framework/src/Illuminate/View/Environment.php"
+			],
+			[
+				"sessionc",
+				"app/controllers/SessionController.php"
+			],
+			[
+				"home",
+				"app/controllers/HomeController.php"
+			],
+			[
+				"controller",
+				"vendor/laravel/framework/src/Illuminate/Routing/Controllers/Controller.php"
+			],
+			[
+				"hell",
+				"app/views/hello.blade.php"
+			],
+			[
+				"envir",
+				"vendor/laravel/framework/src/Illuminate/View/Environment.php"
+			],
+			[
+				"basec",
+				"app/controllers/BaseController.php"
+			],
+			[
+				"rout",
+				"app/routes.php"
+			],
+			[
+				"login",
+				"app/controllers/Login.php"
+			],
+			[
+				"scr",
+				"public/js/script.js"
+			],
+			[
+				"lay",
+				"app/views/layout.blade.php"
+			],
+			[
+				"css",
+				"css/style.scss"
+			],
+			[
+				"s",
+				"css/style.css"
+			],
+			[
+				"container",
+				"vendor/laravel/framework/src/Illuminate/Container/Container.php"
+			],
+			[
+				"ao",
+				"vendor/mockery/mockery/library/Mockery/Matcher/AnyOf.php"
+			],
+			[
+				"",
+				"{"
+			],
+			[
+				"m",
+				"main.css"
+			],
+			[
+				"und",
+				"js/vendor/underscore/underscore.1.5.1.min.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

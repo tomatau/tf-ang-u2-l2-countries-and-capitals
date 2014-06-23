@@ -20,5 +20,8 @@ angular.module('ccApp', ['ngRoute', 'ngAnimate', 'entities', 'geonames'])
                 $rootScope.isLoading = false;
             }, 400);
         });
+        $rootScope.activePage = function(page) {
+            return (page === ($location.path().substring(1) || '/'));
+        }
     })
     ;

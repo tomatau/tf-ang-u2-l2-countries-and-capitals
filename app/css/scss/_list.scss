@@ -1,0 +1,45 @@
+table {
+    width: 100%;
+
+    thead, tbody, tr, td, th {
+        display: block;
+    }
+
+    tbody tr {
+        cursor: pointer;
+    }
+    
+    // random hack to make the table scrollable with a fixed header
+    tr:after {
+        content: ' ';
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+
+    tbody {
+        overflow-y: auto;
+        height: 600px;
+    }
+
+    td, th {
+        height: 33px;
+        width: 13%;
+        float: left;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        &.name {
+            width: 28%;
+        }
+        &.capital {
+            width: 20%;
+        }
+    }
+
+    &.table-hover > tbody > tr:hover > td, 
+    &.table-hover > tbody > tr:hover > th {
+        background-color: lighten(#478bca, 40%);
+    }
+}

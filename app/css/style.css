@@ -4505,3 +4505,39 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.container > header {
+  margin-bottom: 20px;
+  text-align: center; }
+
+nav > a.disabled {
+  pointer-events: none;
+  color: #444; }
+
+table {
+  width: 100%; }
+  table thead, table tbody, table tr, table td, table th {
+    display: block; }
+  table tbody tr {
+    cursor: pointer; }
+  table tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both; }
+  table tbody {
+    overflow-y: auto;
+    height: 600px; }
+  table td, table th {
+    height: 33px;
+    width: 13%;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    table td.name, table th.name {
+      width: 28%; }
+    table td.capital, table th.capital {
+      width: 20%; }
+  table.table-hover > tbody > tr:hover > td, table.table-hover > tbody > tr:hover > th {
+    background-color: #e5eff8; }

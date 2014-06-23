@@ -1,4 +1,15 @@
 // @import "_mixins.reset";
 @import "bootstrap";
 
+.container > header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+nav > a.disabled {
+    pointer-events: none;
+    color: #444;
+}
+
 // @include reset-global;
+@import "list";

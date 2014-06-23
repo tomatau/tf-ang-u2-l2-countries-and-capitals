@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "."
+		}
+	],
+   "build_systems":
+   [
+      {
+         "name": "Gulp Scss",
+         "cmd": [
+            "gulp",
+            "styles"
+         ],
+         "working_dir": "${project_path}"
+      }
+   ]
+}

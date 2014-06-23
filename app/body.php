@@ -2,16 +2,17 @@
     <header>
         <h1>Countries &amp; Capitals</h1>
         <nav>
-            <a href="./#">Home</a>
-            <a href="./#/countries">Browse Countries</a>
+            <a href="#/" ng-class="{disabled: activePage('/')}">Home</a>
+            &nbsp;&#124;&nbsp;
+            <a href="#/countries" ng-class="{disabled: activePage('countries')}">Browse Countries</a>
         </nav>
     </header>
-    <div ng-if="isLoading">Loading</div>
-    <main ng-view ng-if="!isLoading">
+    <section ng-if="isLoading">
+        Loading
+    </section>
+    <main class="main" ng-view ng-if="!isLoading">
         <!-- Content Here -->
     </main>
     <footer>
-        <a href="./#">Home</a>
-        <a href="./#/countries">Browse Countries</a>
     </footer>
 </div>

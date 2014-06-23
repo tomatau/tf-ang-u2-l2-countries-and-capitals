@@ -1,19 +1,19 @@
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover table-bordered">
     <thead>
         <tr>
-            <th>Name</th>
+            <th class="name">Name</th>
             <th>Country Code</th>
-            <th>Capital</th>
-            <th>Area in km<sup>2</sup></th>
+            <th class="capital">Capital</th>
+            <th>km<sup>2</sup></th>
             <th>Population</th>
             <th>Continent</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="c in countryList" ng-click="goToCountry(c.countryCode)">
-            <td>{{ c.countryName }}</td>
+            <td class="name">{{ c.countryName }}</td>
             <td>{{ c.countryCode }}</td>
-            <td>{{ c.capital }}</td>
+            <td class="capital">{{ c.capital }}</td>
             <td>{{ c.areaInSqKm | number }}</td>
             <td>{{ c.population | number }}</td>
             <td>{{ c.continent }}</td>
