@@ -1,0 +1,21 @@
+h2 {
+    text-align: center;
+}
+
+dl {
+    dd, dt {
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+        padding: 5px;
+    }
+
+    dt {
+        text-align: right;
+    }
+    dd {
+        p {
+            display: inline;
+        }
+    }
+}

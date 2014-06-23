@@ -4541,3 +4541,16 @@ table {
       width: 20%; }
   table.table-hover > tbody > tr:hover > td, table.table-hover > tbody > tr:hover > th {
     background-color: #e5eff8; }
+
+h2 {
+  text-align: center; }
+
+dl dd, dl dt {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+  padding: 5px; }
+dl dt {
+  text-align: right; }
+dl dd p {
+  display: inline; }
