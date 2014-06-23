@@ -1,4 +1,4 @@
-angular.module('ccApp', ['ngRoute', 'entities', 'geonames'])
+angular.module('ccApp', ['ngRoute', 'ngAnimate', 'entities', 'geonames'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/error', {
