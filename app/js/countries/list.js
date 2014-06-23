@@ -4,7 +4,8 @@ angular.module('ccApp')
             templateUrl: './js/countries/list.html',
             controller: 'ListCtrl',
             resolve: { 
-                countries: ['countryListRequest', 
+                countries: [
+                    'countryListRequest', 
                     function(countryListRequest){
                         // promise resolves to the countriesEntity
                         return countryListRequest();

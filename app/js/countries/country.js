@@ -14,7 +14,7 @@ angular.module('ccApp')
                     function(countryListRequest, capitalRequest, neighborsListRequest, $route){
                         var cntry = $route.current.params.country;
 
-                        // make sure we have all countries
+                        // make sure we have all countries (hopefully from cache)
                         return countryListRequest()
                             // decorate request country with capital and neighbors 
                             .then(function(){
@@ -26,7 +26,7 @@ angular.module('ccApp')
                             .then(function(country){
                                 return neighborsListRequest(cntry)
                                     .then(function(country){
-                                        return country; // resolves return
+                                        return country; // resolve's return
                                     })
                             });
                     }]
