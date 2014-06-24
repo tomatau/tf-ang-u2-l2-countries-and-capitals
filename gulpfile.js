@@ -57,7 +57,7 @@ gulp.task('usemin', [ 'html' ], function(){
         .pipe(usemin({
             css: [ minifyCss(), 'concat' ],
             vendor: [ uglify() ],
-            js: [ ngmin() ]
+            js: [ ngmin(), uglify() ]
         }))
         .pipe( gulp.dest( roots.build ) );
 })
