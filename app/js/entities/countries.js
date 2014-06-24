@@ -11,7 +11,6 @@ angular.module('entities', [])
             },
             find: function(code){
                 return $filter('filter')(countries, { countryCode: code }).pop();
-            },
-            push: countries.push
+            }
         }
     })
