@@ -1,8 +1,8 @@
 angular.module('ccApp')
-    .constant('COUNTRYURL', '/countries/{{ code }}')
+    .constant('COUNTRYURL', '/countries/{{ code }}/capital')
     
     .config(function($routeProvider){
-        $routeProvider.when('/countries/:code', {
+        $routeProvider.when('/countries/:code/capital', {
             templateUrl: './js/countries/country.html',
             controller: 'CountryCtrl',
             resolve: { 
