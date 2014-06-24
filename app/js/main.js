@@ -14,11 +14,12 @@ angular.module('ccApp', ['ngRoute', 'ngAnimate', 'entities', 'geonames'])
         });
         $rootScope.$on('$routeChangeStart', function(){
             $rootScope.isLoading = true;
+
         });
         $rootScope.$on('$routeChangeSuccess', function(){
             $timeout(function(){
                 $rootScope.isLoading = false;
-            }, 400);
+            }, 300);
         });
         $rootScope.activePage = function(page) {
             return (page === ($location.path().substring(1) || '/'));

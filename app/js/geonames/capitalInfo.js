@@ -5,10 +5,10 @@ angular.module('geonames')
 
     .factory('capitalRequest', 
         function( gateway, CAPITALINFO, $q, countriesEntity ){
-            
+            // decorates the given country with a capitalData object
             return function(country){
                 var def = $q.defer()
-                    ,countryInfo = countriesEntity.find(country)
+                    ,countryInfo = countriesEntity.find(country) // hacky
                     ,params = {
                         country: country,
                         name_equals: countryInfo.capital,
@@ -16,13 +16,13 @@ angular.module('geonames')
                         featureCode: 'PPLC'
                     };
                 gateway(CAPITALINFO, params)
-                    .success(function(data){
+                    .success(function(data){ // make this external
                         def.resolve(
                             angular.extend(countryInfo, {
                                 capitalData: data.geonames.pop()
                             })
-                        )
-                    })
+                        );
+                    });
                 return def.promise;
             }
         })

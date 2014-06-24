@@ -21,8 +21,8 @@
                     params: params,
                     cache: true
                 }).error(function(){
-                    console.log('error', arguments)
-                })
+                    console.log('error', arguments);
+                });
             }
         })
         ;

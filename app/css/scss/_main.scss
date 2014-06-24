@@ -1,0 +1,24 @@
+.container {
+    -webkit-perspective: 220px;
+    perspective: 220px;
+}
+
+.main {
+    @include transition(.1s ease-in all);
+    @include transform-style(preserve-3d);
+    opacity: 1;
+    position: relative;
+}
+
+.ng-leave.main
+,.ng-enter-active.main
+{
+    @include transform( translateZ(0px) scale(1) );
+    opacity: 1;
+}
+.ng-leave-active.main
+,.ng-enter.main
+{
+    @include transform( translateZ(-22px) scale(0.5) );
+    opacity: 0;
+}
