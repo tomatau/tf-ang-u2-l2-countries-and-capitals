@@ -5,4 +5,5 @@ angular.module('ccApp')
             controller: 'IntroCtrl'
         })
     })
-    .controller('IntroCtrl', function($scope){});
+    .controller('IntroCtrl', function($scope){})
+;

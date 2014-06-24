@@ -1,0 +1,24 @@
+<h2>{{ country.countryName }}</h2>
+
+<dl>
+    <dt>Population of Country</dt>
+    <dd>{{ country.population | number }}</dd>
+    
+    <dt>Area</dt>
+    <dd>{{ country.areaInSqKm | number }}</dd>
+
+    <dt>Capital</dt>
+    <dd>{{ country.capital }}</dd>
+
+    <dt>Population of Capital</dt>
+    <dd>{{ country.capitalData.population | number }}</dd>
+
+    <dt>{{ country.neighbors.length }} Neighbors</dt>
+    <dd>
+        <p ng-repeat="n in country.neighbors">
+            <a ng-href="#{{ countryUrl(n.countryCode) }}">{{ n.countryName }}</a>
+        </p>
+    </dd>
+</dl>
+<img ng-src="{{ mapUrl(country.countryCode) }}" alt="{{country.countryName }}'s map">
+<img ng-src="{{ flagUrl(country.countryCode) }}" alt="{{country.countryName }}'s flag">

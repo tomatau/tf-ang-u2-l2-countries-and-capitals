@@ -1,4 +1,4 @@
-(function(){
+;(function(){
     var apiRoot = 'http://api.geonames.org/',
         geoRoot = 'http://www.geonames.org/'
         ;

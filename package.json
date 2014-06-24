@@ -18,6 +18,11 @@
   "homepage": "https://github.com/tomatau/tf-ang-u2-l2-countries-and-capitals",
   "dependencies": {
     "gulp": "^3.8.1",
-    "gulp-sass": "^0.7.2"
+    "gulp-clean": "^0.3.0",
+    "gulp-minify-css": "^0.3.5",
+    "gulp-ngmin": "^0.3.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-uglify": "^0.3.1",
+    "gulp-usemin": "^0.3.5"
   }
 }
