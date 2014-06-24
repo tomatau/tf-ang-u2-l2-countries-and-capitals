@@ -4508,9 +4508,11 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.container > header {
+body > header {
   margin-bottom: 20px;
-  text-align: center; }
+  text-align: center;
+  padding: 1px 0 10px;
+  background-color: #F5F5F5; }
 
 nav > a.disabled {
   pointer-events: none;
