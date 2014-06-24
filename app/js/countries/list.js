@@ -7,7 +7,6 @@ angular.module('ccApp')
                 countries: [
                     'countryListRequest', 
                     function(countryListRequest){
-                        // promise resolves to the countriesEntity
                         return countryListRequest();
                     }]
             }

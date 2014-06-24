@@ -14,7 +14,6 @@ angular.module('ccApp', ['ngRoute', 'ngAnimate', 'entities', 'geonames'])
         });
         $rootScope.$on('$routeChangeStart', function(){
             $rootScope.isLoading = true;
-
         });
         $rootScope.$on('$routeChangeSuccess', function(){
             $timeout(function(){

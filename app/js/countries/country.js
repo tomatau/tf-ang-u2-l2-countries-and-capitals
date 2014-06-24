@@ -1,34 +1,17 @@
 angular.module('ccApp')
     .constant('COUNTRYURL', '/countries/{{ code }}')
     .config(function($routeProvider){
-        $routeProvider.when('/countries/:country', {
+        $routeProvider.when('/countries/:code', {
             templateUrl: './js/countries/country.html',
             controller: 'CountryCtrl',
             resolve: { 
-                // todo: build into 1 service
                 country: [ 
-                    'countryListRequest',
-                    'capitalRequest',
-                    'neighborsListRequest', 
+                    'countryRepo',
                     '$route',
-                    function(countryListRequest, capitalRequest, neighborsListRequest, $route){
-                        var cntry = $route.current.params.country;
-
-                        // make sure we have all countries (hopefully from cache)
-                        return countryListRequest()
-                            // decorate request country with capital and neighbors 
-                            .then(function(){
-                                return capitalRequest(cntry)
-                                    .then(function(country){
-                                        return country;
-                                    });
-                            })
-                            .then(function(country){
-                                return neighborsListRequest(cntry)
-                                    .then(function(country){
-                                        return country; // resolve's return
-                                    })
-                            });
+                    function(countryRepo, $route){
+                        return countryRepo(
+                            $route.current.params.code
+                        );
                     }]
             }
         })
