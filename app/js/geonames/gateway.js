@@ -12,14 +12,14 @@
         .factory('gateway', function($http){
             return function(url, params){
                 params = angular.extend({
-                        username: 'tomatao',
-                        formatted: true
+                        formatted: true,
+                        username: 'tomatao'
                     }, params || {});
                 return $http({
                     method: 'GET',
-                    url: url,
+                    cache: true,
                     params: params,
-                    cache: true
+                    url: url
                 }).error(function(){
                     console.log('error', arguments);
                 });

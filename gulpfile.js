@@ -12,7 +12,7 @@ var roots = {
         ,bower: './bower_components'
         ,build: './build'
     },
-    indexFile = roots.app + '/index.html';
+    indexFile = roots.app + '/index.html',
     paths = {
         css : roots.app + '/css'
         ,scss : roots.app + '/css/scss/style.scss'
