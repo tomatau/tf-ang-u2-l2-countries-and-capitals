@@ -44,7 +44,7 @@ describe('Geonames - gateway', function () {
                         $http.call = jasmine.createSpy('$http');
                         $http.call(args);
                         return {
-                            error: jasmine.createSpy('error')
+                            error: function(){}
                         }
                     }
                     return $http;
@@ -76,6 +76,4 @@ describe('Geonames - gateway', function () {
             }
         });
     });
-
-            
 });

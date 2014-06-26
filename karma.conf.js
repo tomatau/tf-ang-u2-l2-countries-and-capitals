@@ -10,21 +10,31 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: [
+      'jasmine'
+    ],
 
 
     // list of files / patterns to load in the browser
     files: [
+      // testing libraries
       './node_modules/jasmine-expect/dist/jasmine-matchers.js',
+      './node_modules/sinon-browser-only/sinon.js',
+      './node_modules/jasmine-sinon/lib/jasmine-sinon.js', // USE 0.3.x for old jasmine LOL
+
+      // angular
       './bower_components/angular/angular.js',
       './bower_components/angular-animate/angular-animate.js',
       './bower_components/angular-route/angular-route.js',
       './bower_components/angular-mocks/angular-mocks.js',
 
+      // have tp specify order of files or bugs occur
       './app/js/main.js',
       './app/js/entities/*.js',
       './app/js/geonames/gateway.js',
       './app/js/geonames/gatewaySpec.js',
+      './app/js/geonames/countryList.js',
+      './app/js/geonames/countryListSpec.js',
     ],
 
 

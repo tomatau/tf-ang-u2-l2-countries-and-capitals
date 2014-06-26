@@ -12,7 +12,7 @@ angular.module('geonames')
                     .success(function(data){
                         countriesEntity.set(data.geonames)
                         def.resolve(countriesEntity)
-                    })
+                    });
                 return def.promise;
             }
         })
