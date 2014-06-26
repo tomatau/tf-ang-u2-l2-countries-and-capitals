@@ -4,20 +4,37 @@ describe('Geonames - gateway', function () {
     describe('Constants', function () {
         it('should provide constants for requests', function () {
             inject(function (GEOAPI, GEOURL, FLAG, MAP) {
-                expect(GEOAPI).toStartWith('http');
+                expect(GEOAPI).toStartWith('http'); // could be https still
                 expect(GEOURL).toStartWith('http');
+                // maybe checking for image type (regex)
+                // but then we'll need to keep manually adding possible extensions
+                //  that could be a good thing
                 expect(FLAG).toBeNonEmptyString();
                 expect(MAP).toBeNonEmptyString();
             })
         });
     });
 
-    describe('Gateway', function () {
+    describe('Contractual Agreement with APP', function () {
+        it('should return a promise', function () {
+            
+        });
+
+        it('should addsuccess and error functions to the returned promise', function () {
+            
+        });
+    });
+
+    // this implementation is specifically HTTP but our app shouldn't care
+    //  maybe it could care at a congig stage but only need to include the word HTTPGateway
+    //  Once .
+    describe('HTTP Gateway', function () {
+        // this could easily change, localStorage, WebSQL, IndexedDB
         it('should perform GET request to URL with format and username', function () {
             inject(function($httpBackend, gateway){
                 var url = "test.url";
                 $httpBackend
-                    .expectGET(url + "?formatted=true&username=tomatao")
+                    .expectGET(/test\.url/)
                     .respond(200);
 
                 gateway(url);
@@ -25,15 +42,26 @@ describe('Geonames - gateway', function () {
             })
         });
 
+        // maybe don't need any of these... making sure we use HTTP
+        //  support that's the current impl here
+        //  
+        //  On a side note:
+        //  in the app config stage we could provide 'gateway' to be this (httpGateway)
+        //  
         describe('$http arguments', function () {
-            var defaultOptions = {
+            // not sure about this... lots of internals
+            //  especially 
+            // these could be important though, depends!
+            // could just check that an object includes
+            var url = "test.url";
+                defaultOptions = {
                 method: 'GET',
                 cache: true,
                 params: {
                     formatted: true,
                     username: 'tomatao'
                 },
-                url: "test.url"
+                url: url // not default but we're using url var
             };
 
             beforeEach(module(function($provide){
