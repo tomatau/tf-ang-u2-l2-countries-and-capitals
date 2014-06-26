@@ -1,4 +1,6 @@
 describe('Geonames - gateway', function () {
+    var url = "test.url";
+    
     beforeEach(module("geonames"));
 
     /*
@@ -23,13 +25,29 @@ describe('Geonames - gateway', function () {
         });
     });
 
+    /**
+     * Contracts
+     *
+     * tests that certain 'intefaces' are implemented 
+     * that will be expected by other components using the gateway
+     */
     describe('Contractual Agreement with APP', function () {
         it('should return a promise', function () {
-            
+            inject(function( gateway, $httpBackend, $q ){
+                $httpBackend.expectGET(/test\.url/).respond(200);
+                expect(gateway(url)).toImplement($q.defer().promise)
+            })
         });
 
         it('should addsuccess and error functions to the returned promise', function () {
-            
+            inject(function( gateway, $httpBackend, $q ){
+                var contract = {
+                    success: function(){},
+                    error: function(){}
+                };
+                $httpBackend.expectGET(/test\.url/).respond(200);
+                expect(gateway(url)).toImplement(contract)
+            });
         });
     });
 
@@ -40,7 +58,6 @@ describe('Geonames - gateway', function () {
         // this could easily change, localStorage, WebSQL, IndexedDB
         it('should perform GET request to URL with format and username', function () {
             inject(function($httpBackend, gateway){
-                var url = "test.url";
                 $httpBackend.expectGET(/test\.url/).respond(200);
                 gateway(url);
                 $httpBackend.verifyNoOutstandingExpectation();
@@ -74,14 +91,11 @@ describe('Geonames - gateway', function () {
                     $provide.factory('$http', function(){ return $httpStub; });
                 })
                 inject(function(gateway){
-                    var params = {
-                            extra: "extra param"
-                        };
+                    var params = { extra: "extra param" };
                     gateway(url, params);
                     // save the params, we know it's an object with a params key
-                    expect($httpStub.getCall(0).args[0].params.extra).toBe(
-                        params.extra
-                    )
+                    expect( $httpStub.getCall(0).args[0].params.extra )
+                        .toBe( params.extra )
                 })
             });
 
@@ -126,7 +140,13 @@ describe('Geonames - gateway', function () {
                         getExpectedOptions(params)
                     );
                 })
-
+                /**
+                 * Create and return an options object
+                 * extend the default params (angular.extend is not deep) then
+                 * add the params onto a copy of the default options
+                 * 
+                 * @return {object}        options object with new params
+                 */
                 function getExpectedOptions(params){
                     var expectedParams = angular.extend(
                             defaultOptions.params, params

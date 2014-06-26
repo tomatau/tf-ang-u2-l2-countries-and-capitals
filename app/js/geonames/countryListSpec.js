@@ -37,9 +37,7 @@ describe('Geonames - countryList', function () {
             module(function($provide){
                 $provide.factory('gateway', function(){
                     return function(){
-                        return {
-                            success: function(){}
-                        }
+                        return { success: function(){} }
                     };
                 });
             });
@@ -53,16 +51,16 @@ describe('Geonames - countryList', function () {
         /**
          * VERSION 2: Mocking out the httpRequest
          *
-         * This is tieing us to the implementation that makes a httpRequest
+         * Nice, although: this is tieing us to the implementation that makes a httpRequest
          *     the gateway is another unit and shouldn't affect this test..
-         *         the gateway is used by the countryList and now changing it
+         *         the gateway is used by the countryList and now changing the gateway
          *         will potentially break this test
          *         The gateway is another important module we use a lot
          *             it has agreed to give us a success method in it's API
-         *             it never agreed to make a httpRequest, we might use localStorage...
+         *             it never agreed to make a httpRequest, it might use localStorage...
          *     We can't see that impl from here in this test but we're not stubbing it out
          */
-        it('should return a deferred object', function () {
+        xit('should return a deferred object', function () {
             inject(function (countryListRequest, $q, $httpBackend) {
                 $httpBackend.whenGET(/^http\S*countryInfoJSON/).respond(200);
                 expect(countryListRequest()).toImplement(
@@ -72,7 +70,7 @@ describe('Geonames - countryList', function () {
         });
 
         /**
-         * VERSION 2: Mocking out the gateway with sinon
+         * VERSION 3 Mocking out the gateway with sinon
          *
          * Nice, we dont depend on the gateway's impl and it's cleaner than manual
          *     As long as it returns a success method it can do anything
@@ -94,10 +92,27 @@ describe('Geonames - countryList', function () {
 
     describe('Entity From API', function () {
         /**
+         * We know that this should set the countriesEntity
          *
-         * Set the 
+         * but we have to either stub out the request or the gateway call
+         * otherwise we'll depend on the API working for this test to pass...
+         *     this is testing this unit, not the integration!
          */
-        it('should set the countriesEntity to array', function () {
+        
+        /**
+         * VERSION 1: stubbing out the http request
+         *
+         * This is a quick and simple way to prevent the request to the API
+         *     but what if the countryListRequest uses JSONP or localStorage?..
+         *     this unit uses the gateway, not the $http
+         *
+         * we also don't really have a choice but to couple ourselves to the data structure
+         *
+         * Another point is thay we test the use of the COUNTRYINFO url in another test
+         *     so we don't really need to do it here, we just need to make sure
+         *     that the resolve from the gateway's promise sets the entity!
+         */
+        xit('should set the countriesEntity to array from countryInfoJSON', function () {
             inject(function( countriesEntity, countryListRequest, $httpBackend ){
                 var data = { geonames: [] };
                 $httpBackend.whenGET(/^http\S*countryInfoJSON/).respond(200, data);
@@ -106,41 +121,75 @@ describe('Geonames - countryList', function () {
                 countryListRequest();
                 $httpBackend.flush();
                 
-                expect(countriesEntity.set).toHaveBeenCalledWith(data.geonames);
+                expect( countriesEntity.set ).toHaveBeenCalledWith( data.geonames );
             })
         });
 
+
+        /**
+         * VERSION 2: stub out the gateway with jasmine
+         * 
+         * this is very verbose and complicated
+         * but it is making sure that the gateway's resolve is used to set the entity
+         */
         xit('should set the countriesEntity to array from gateway call', function () {
-            var gateway, def;
-            // instead of all this, we can resolve the whenGET for COUNTRYINFO
-            // then just asset the entity was set
+            var gateway, def, data = { geonames: []};
             module(function($provide){
                 $provide.factory('gateway', function($q){
                     def = $q.defer();
-            // stub out the gateway to just return a promise
                     gateway = function(){
                         return def.promise;
                     }
-            // make the promise pretend to be a $http one
-            //      this is horrible it exposes internals
                     def.promise.success = def.promise.then;
                     return gateway;
                 });
             });
-            // now we can spy on the entity to make sure it was set
             inject(function (countryListRequest, countriesEntity, $rootScope){
                 spyOn(countriesEntity, 'set');
 
                 countryListRequest()
                 // we need to resolve and digest it to make the success happen 
-                def.resolve(1);
+                def.resolve(data);
                 $rootScope.$digest();
 
-                expect(countriesEntity.set).toHaveBeenCalled()
+                expect( countriesEntity.set ).toHaveBeenCalledWith( data.geonames );
             });
+        });
+
+        /**
+         * VERSION 3: stub out the gateway with sinon
+         *
+         * this is still very verbose, testing the success callback is just a pain!
+         */
+        it('should set the countriesEntity to array from gateway call', function () {
+            var data = { geonames: []},
+                successFn,
+                gatewayStub = sinon.stub().returns({
+                    success: function(fn){
+                        successFn = fn;
+                    } });
+            module(function($provide){
+                $provide.factory('gateway', function(){ return gatewayStub; });
+            });
+            inject(function(countryListRequest, countriesEntity){
+                var spy = sinon.spy(countriesEntity, 'set');
+
+                countryListRequest();
+                successFn(data);
+                expect( countriesEntity.set ).toHaveBeenCalledWith( data.geonames );
+            })
         });
     });
 
+    /**
+     * Tests for how this module works with the gateway
+     *
+     * We may wish to use something other than the gateway in the future
+     *     but we need to trust something... either $http or gateway
+     *     and gateway is being used as a layer of protection 
+     *     as we can make diferent gateways and change $provider's reference
+     *         e.g. $provider.factory('gateway', -> localStorageGateway)
+     */
     describe('Request Using Gateway', function () {
         /**
          * VERSION 1: Mocking out the gateway using jasmine
@@ -167,7 +216,7 @@ describe('Geonames - countryList', function () {
             inject(function( countryListRequest, COUNTRYINFO ){
                 var params = {};
                 countryListRequest(params);
-                expect(gateway.call).toHaveBeenCalledWith(COUNTRYINFO, params);
+                expect( gateway.call ).toHaveBeenCalledWith( COUNTRYINFO, params );
             });
         });
         
@@ -207,5 +256,4 @@ describe('Geonames - countryList', function () {
             });
         });
     });
-    
 });
