@@ -95,7 +95,7 @@ describe('Geonames - countryList', function () {
                 return stub;
             });
         });
-        inject(function( gateway, countryListRequest, COUNTRYINFO ){
+        inject(function( countryListRequest, COUNTRYINFO ){
             var params = {};
 
             countryListRequest(params);

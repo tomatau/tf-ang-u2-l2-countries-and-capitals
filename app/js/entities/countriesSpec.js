@@ -26,8 +26,8 @@ describe('Entity - countries', function () {
             
             countriesEntity.set(testData);
 
-            expect(countriesEntity.find("ABC")).toBe(testData[0]);
             expect(countriesEntity.find("DEF")).toBe(testData[1]);
+            expect(countriesEntity.find("ABC")).toBe(testData[0]);
         })
     });
 });
