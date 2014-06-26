@@ -133,11 +133,11 @@ describe('Geonames - countryList', function () {
          * but it is making sure that the gateway's resolve is used to set the entity
          */
         xit('should set the countriesEntity to array from gateway call', function () {
-            var gateway, def, data = { geonames: []};
+            var def, data = { geonames: []};
             module(function($provide){
                 $provide.factory('gateway', function($q){
                     def = $q.defer();
-                    gateway = function(){
+                    var gateway = function(){
                         return def.promise;
                     }
                     def.promise.success = def.promise.then;
@@ -172,7 +172,7 @@ describe('Geonames - countryList', function () {
                 $provide.factory('gateway', function(){ return gatewayStub; });
             });
             inject(function(countryListRequest, countriesEntity){
-                var spy = sinon.spy(countriesEntity, 'set');
+                sinon.spy(countriesEntity, 'set');
 
                 countryListRequest();
                 successFn(data);
