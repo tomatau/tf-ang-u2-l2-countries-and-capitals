@@ -36,6 +36,8 @@ describe('Geonames - gateway', function () {
             inject(function( gateway, $httpBackend, $q ){
                 $httpBackend.expectGET(/test\.url/).respond(200);
                 expect(gateway(url)).toImplement($q.defer().promise)
+                $httpBackend.flush();
+                $httpBackend.verifyNoOutstandingRequest();
             })
         });
 
@@ -47,6 +49,8 @@ describe('Geonames - gateway', function () {
                 };
                 $httpBackend.expectGET(/test\.url/).respond(200);
                 expect(gateway(url)).toImplement(contract)
+                $httpBackend.flush();
+                $httpBackend.verifyNoOutstandingRequest();
             });
         });
     });
@@ -60,6 +64,7 @@ describe('Geonames - gateway', function () {
             inject(function($httpBackend, gateway){
                 $httpBackend.expectGET(/test\.url/).respond(200);
                 gateway(url);
+                $httpBackend.flush();
                 $httpBackend.verifyNoOutstandingExpectation();
             })
         });
@@ -131,7 +136,7 @@ describe('Geonames - gateway', function () {
                         return $http;
                     });
                 });
-                inject(function($httpBackend, $http, gateway){
+                inject(function($http, gateway){
                     var params = {
                             extra: "extra param"
                         };

@@ -60,6 +60,8 @@ describe('Geonames - countryList', function () {
             inject(function (countryListRequest, $q, $httpBackend) {
                 $httpBackend.whenGET(/^http\S*countryInfoJSON/).respond(200);
                 expect(countryListRequest()).toImplement( $q.defer().promise );
+                $httpBackend.flush();
+                $httpBackend.verifyNoOutstandingRequest();
             })
         });
 
@@ -76,7 +78,7 @@ describe('Geonames - countryList', function () {
             module(function($provide){
                 $provide.factory('gateway', function(){ return gatewayStub; });
             });
-            inject(function (countryListRequest, $q, $httpBackend) {
+            inject(function (countryListRequest, $q) {
                 expect(countryListRequest()).toImplement( $q.defer().promise );
             })
         });
@@ -114,6 +116,7 @@ describe('Geonames - countryList', function () {
                 $httpBackend.flush();
                 
                 expect( countriesEntity.set ).toHaveBeenCalledWith( data.geonames );
+                $httpBackend.verifyNoOutstandingRequest();
             })
         });
 

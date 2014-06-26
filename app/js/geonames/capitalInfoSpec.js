@@ -15,7 +15,7 @@ describe('Geonames - capitalInfo', function () {
         module(function($provide){
             $provide.factory('gateway', function(){ return gatewayStub; });
         });
-        inject(function ( capitalRequest, $q, $httpBackend, gateway ) {
+        inject(function ( capitalRequest, gateway ) {
             expect(capitalRequest(countryEntity)).toImplement( gateway() );
         })
     });

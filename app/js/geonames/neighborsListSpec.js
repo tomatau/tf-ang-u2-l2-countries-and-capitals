@@ -12,7 +12,7 @@ describe('Geonames - neighborsList', function () {
         module(function($provide){
             $provide.factory('gateway', function(){ return gatewayStub; });
         });
-        inject(function ( neighborsListRequest, $q, $httpBackend, gateway ) {
+        inject(function ( neighborsListRequest, gateway ) {
             expect(neighborsListRequest(countryEntity)).toImplement( gateway() );
         })
     });

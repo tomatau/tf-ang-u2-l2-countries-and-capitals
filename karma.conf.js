@@ -39,6 +39,8 @@ module.exports = function(config) {
       './app/js/geonames/neighborsListSpec.js',
       './app/js/geonames/capitalInfo.js',
       './app/js/geonames/capitalInfoSpec.js',
+      './app/js/geonames/countryRepo.js',
+      './app/js/geonames/countryRepoSpec.js',
     ],
 
 

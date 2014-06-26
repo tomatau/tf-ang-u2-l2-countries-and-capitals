@@ -12,6 +12,8 @@ angular.module('geonames')
             }
         }
     )
+    // these two decorators are currently only internal to this reop
+    // but they are built in such a way they could be extracted and reused easily
     .factory('capitalDataDecorator',
         function( capitalRequest, $q, countriesEntity ){
             return function capitalDataDecorator(countryCode){
