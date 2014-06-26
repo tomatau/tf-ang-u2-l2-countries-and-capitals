@@ -3,7 +3,7 @@ describe('Geonames - countryList', function () {
     // possibly a bad idea but we need to stub something to make the tests pass
     //  alternatively stub the httpRequest but then changing the gateway could break
     //  these tests...
-    var gatewayStub = sinon.stub().returns({success: function(){}});
+    var gatewayStub = sinon.stub().returns( { success: function(){} } );
 
     // CONCLUSION:
     // We need to use both the http request in the tests as well as the gateway
@@ -36,15 +36,11 @@ describe('Geonames - countryList', function () {
         xit('should return a deferred object', function () {
             module(function($provide){
                 $provide.factory('gateway', function(){
-                    return function(){
-                        return { success: function(){} }
-                    };
+                    return function(){ return { success: function(){} } };
                 });
             });
             inject(function (countryListRequest, $q) {
-                expect(countryListRequest()).toImplement(
-                    $q.defer().promise
-                );
+                expect(countryListRequest()).toImplement( $q.defer().promise );
             })
         });
 
@@ -63,9 +59,7 @@ describe('Geonames - countryList', function () {
         xit('should return a deferred object', function () {
             inject(function (countryListRequest, $q, $httpBackend) {
                 $httpBackend.whenGET(/^http\S*countryInfoJSON/).respond(200);
-                expect(countryListRequest()).toImplement(
-                    $q.defer().promise
-                );
+                expect(countryListRequest()).toImplement( $q.defer().promise );
             })
         });
 
@@ -76,16 +70,14 @@ describe('Geonames - countryList', function () {
          *     As long as it returns a success method it can do anything
          *     Also we can use the stub if necessary
          *     
-         * Still exposing internal of using gateway depencency (success function)
+         * Still coupled to contracts of gateway (success function)
          */
         it('should return a deferred object', function () {
             module(function($provide){
                 $provide.factory('gateway', function(){ return gatewayStub; });
             });
             inject(function (countryListRequest, $q, $httpBackend) {
-                expect(countryListRequest()).toImplement(
-                    $q.defer().promise
-                );
+                expect(countryListRequest()).toImplement( $q.defer().promise );
             })
         });
     });
@@ -161,7 +153,7 @@ describe('Geonames - countryList', function () {
          *
          * this is still very verbose, testing the success callback is just a pain!
          */
-        it('should set the countriesEntity to array from gateway call', function () {
+        xit('should set the countriesEntity to array from gateway call', function () {
             var data = { geonames: []},
                 successFn,
                 gatewayStub = sinon.stub().returns({
@@ -175,9 +167,31 @@ describe('Geonames - countryList', function () {
                 sinon.spy(countriesEntity, 'set');
 
                 countryListRequest();
-                successFn(data);
+                successFn(data); // fake a resolve from gateway with data
                 expect( countriesEntity.set ).toHaveBeenCalledWith( data.geonames );
             })
+        });
+
+        /**
+         * VERSION 4: stub gateway, test using spies args insteaf of saving a successFn
+         * 
+         * this is a slight improvement as we have a simple stub now
+         */
+        it('should set the countriesEntity to array from gateway call', function () {
+            var data = { geonames: [] },
+                successSpy = sinon.spy();
+            module(function($provide){
+                $provide.factory('gateway', function(){
+                    return function(){ return { success: successSpy }; }
+                });
+            });
+            inject(function(countryListRequest, countriesEntity){
+                sinon.spy(countriesEntity, 'set');
+                countryListRequest();
+                // fake a resolve for the success' callback function argument
+                successSpy.getCall(0).args[0](data);
+                expect( countriesEntity.set ).toHaveBeenCalledWith( data.geonames );
+            });
         });
     });
 
@@ -214,7 +228,7 @@ describe('Geonames - countryList', function () {
                 });
             });
             inject(function( countryListRequest, COUNTRYINFO ){
-                var params = {};
+                var params = { test: 'value' };
                 countryListRequest(params);
                 expect( gateway.call ).toHaveBeenCalledWith( COUNTRYINFO, params );
             });
@@ -232,7 +246,7 @@ describe('Geonames - countryList', function () {
                 $provide.factory('gateway', function(){ return gatewayStub; });
             });
             inject(function( countryListRequest, COUNTRYINFO ){
-                var params = {};
+                var params = { test: 'value' };
                 countryListRequest(params);
                 expect(gatewayStub.calledWith(COUNTRYINFO, params)).toEqual(true);
             });
@@ -243,14 +257,14 @@ describe('Geonames - countryList', function () {
          *
          * Here we improve the assertions of sinon for jasmine
          *
-         * NB. you must include version 0.3.* of jasmine sinon as karma-jasmine legacy
+         * NB. you must include version 0.3.* of jasmine sinon as karma-jasmine is legacy
          */
         it('should accept params to customise gateway request', function () {
             module(function($provide){
                 $provide.factory('gateway', function(){ return gatewayStub; });
             });
             inject(function( countryListRequest, COUNTRYINFO ){
-                var params = {};
+                var params = { test: 'value' };
                 countryListRequest(params);
                 expect(gatewayStub).toHaveBeenCalledWith(COUNTRYINFO, params);
             });

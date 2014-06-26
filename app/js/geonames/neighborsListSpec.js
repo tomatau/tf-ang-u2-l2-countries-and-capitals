@@ -1,22 +1,30 @@
-describe('Geonames - countryList', function () {
+describe('Geonames - neighborsList', function () {
+    var gatewayStub = sinon.stub().returns( { success: function(){} } );
+    var countryEntity = { geonameId: 'value' };
+
     beforeEach(module("geonames"));
 
-    beforeEach(function () {
-        // turn gateway into a spy that returns a success spy
+    afterEach(function () {
+        gatewayStub.reset();
     });
 
-    it('should return a deferred object', function () {
-        inject(function (countriesEntity) {
-            // expect(countriesEntity.get()).toEqual([]);
+    it('should return a the gateway promise object', function () {
+        module(function($provide){
+            $provide.factory('gateway', function(){ return gatewayStub; });
+        });
+        inject(function ( neighborsListRequest, $q, $httpBackend, gateway ) {
+            expect(neighborsListRequest(countryEntity)).toImplement( gateway() );
         })
     });
 
-    it('should set the countriesEntity to array from gateway call', function () {
-        
+    it('should send geonameId params to gateway request', function () {
+        module(function($provide){
+            $provide.factory('gateway', function(){ return gatewayStub; });
+        });
+        inject(function( neighborsListRequest, NEIGHBOURS ){
+            var expectedParams = { geonameId: countryEntity.geonameId };
+            neighborsListRequest(countryEntity);
+            expect(gatewayStub).toHaveBeenCalledWith(NEIGHBOURS, expectedParams);
+        });
     });
-
-    it('should accept params to customise gateway request', function () {
-        
-    });
-
 });

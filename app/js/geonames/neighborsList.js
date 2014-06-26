@@ -8,7 +8,7 @@ angular.module('geonames')
             return function(countryEntity){
                 return gateway(NEIGHBOURS, {
                         geonameId: countryEntity.geonameId
-                    })
+                    });
             }
         })
     ;
