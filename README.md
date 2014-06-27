@@ -9,7 +9,7 @@ This is using jasmine 1.3 for some reason even though I ran karma init. Should r
 
 The Specs for testing are each next to their respective file:
 
-- tests make use of:
+######tests make use of:
 - jasmine-expect for exta assertions on strings, etc... 
 - sinonjs a mocking library to give more control over spies and stubs
 - jasmine.sinon to integrate the assertions of sinon into jasmine
