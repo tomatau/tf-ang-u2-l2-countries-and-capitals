@@ -10,7 +10,12 @@ describe('Geonames - countryRepo', function () {
     describe('API', function () {
         beforeEach(function () {
             module(function($provide){
-                $provide.factory('countryListRequest', function(){ return countryListReqStub; });
+                $provide.factory('countryListRequest', 
+                    function(){ return countryListReqStub; });
+                $provide.factory('capitalDataDecorator', 
+                    function(){ return capitalDataDecStub; });
+                $provide.factory('neighborsDecorator', 
+                    function(){ return neightborsDecStub; });
             });
             inject(function($q){
                 countryListReqStub = sinon.stub().returns( $q.defer().promise ),
@@ -20,7 +25,7 @@ describe('Geonames - countryRepo', function () {
         });
 
         it('should return the countryListRequest promise', function () {
-            inject(function ( countryRepo, countryListRequest, $q ) {
+            inject(function ( countryRepo, countryListRequest ) {
                 expect(countryRepo(countryCode)).toImplement( countryListRequest() );
             });
         });
@@ -30,7 +35,7 @@ describe('Geonames - countryRepo', function () {
      * This is kinda checking internals and not the main purpose of the thing
      *     would mean we need to write tests for decorators too
      */
-    xit('should capitalDataDecorator and neighborsDecorator', function () {});
+    xit('should call capitalDataDecorator and neighborsDecorator', function () {});
 
     describe('Creating a Country Entity', function () {
         /**

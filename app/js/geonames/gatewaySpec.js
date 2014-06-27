@@ -5,10 +5,10 @@ describe('Geonames - gateway', function () {
 
     /*
     This file splits into 3 sections:
-     - constance: a bunch of URL strings the API expects this gateway to provide
-     - the first section 'contracts' describes any agreements the gateway is making
-        with anyone who uses it.. kinda like a 'public api'
-     - second section http gateway describes the specific http functionality it needs to perform
+     - constants: a bunch of URL strings the API expects this gateway to provide
+     - the second section 'contracts' describes any agreements the gateway is making
+        with other files that uses it.. kinda like a public api
+     - third section http gateway describes the specific http functionality it needs to perform
      */
 
     describe('Constants', function () {
@@ -31,7 +31,7 @@ describe('Geonames - gateway', function () {
      * tests that certain 'intefaces' are implemented 
      * that will be expected by other components using the gateway
      */
-    describe('Contractual Agreement with APP', function () {
+    describe('Contracts (API)', function () {
         it('should return a promise', function () {
             inject(function( gateway, $httpBackend, $q ){
                 $httpBackend.expectGET(/test\.url/).respond(200);
@@ -41,8 +41,8 @@ describe('Geonames - gateway', function () {
             })
         });
 
-        it('should addsuccess and error functions to the returned promise', function () {
-            inject(function( gateway, $httpBackend, $q ){
+        it('should add success and error functions to the returned promise', function () {
+            inject(function( gateway, $httpBackend ){
                 var contract = {
                     success: function(){},
                     error: function(){}

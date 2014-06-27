@@ -29,8 +29,8 @@ module.exports = function(config) {
       './bower_components/angular-mocks/angular-mocks.js',
 
       // have tp specify order of files or bugs occur
-      './app/js/main.js',
       './app/js/entities/*.js',
+      // geonames
       './app/js/geonames/gateway.js',
       './app/js/geonames/gatewaySpec.js',
       './app/js/geonames/countryList.js',
@@ -41,6 +41,13 @@ module.exports = function(config) {
       './app/js/geonames/capitalInfoSpec.js',
       './app/js/geonames/countryRepo.js',
       './app/js/geonames/countryRepoSpec.js',
+      // routes
+      './app/js/main.js',
+      './app/js/mainSpec.js',
+      './app/js/intro/intro.js',
+      './app/js/intro/introSpec.js',
+      './app/js/countries/list.js',
+      './app/js/countries/listSpec.js',
     ],
 
 

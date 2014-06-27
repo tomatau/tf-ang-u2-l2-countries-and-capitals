@@ -20,7 +20,7 @@ describe('Geonames - capitalInfo', function () {
         })
     });
 
-    it('should send capital, countryCode, type and code params to gateway request', function () {
+    it('should send appropriate params to gateway request', function () {
         module(function($provide){
             $provide.factory('gateway', function(){ return gatewayStub; });
         });

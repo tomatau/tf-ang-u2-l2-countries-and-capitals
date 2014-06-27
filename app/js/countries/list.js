@@ -12,7 +12,8 @@ angular.module('ccApp')
             }
         })
     })
-    .controller('ListCtrl', function($scope, countries, $location, $interpolate, COUNTRYURL){
+    .controller('ListCtrl', 
+            function($scope, countries, $location, $interpolate, COUNTRYURL){
         $scope.countryList = countries.get();
         $scope.goToCountry = function(countryCode){
             $location.path(

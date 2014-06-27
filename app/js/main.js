@@ -5,7 +5,7 @@ angular.module('ccApp', ['ngRoute', 'ngAnimate', 'entities', 'geonames'])
                 template: "Error during route change"
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/error'
             });
     })
     .run(function($rootScope, $timeout, $location){

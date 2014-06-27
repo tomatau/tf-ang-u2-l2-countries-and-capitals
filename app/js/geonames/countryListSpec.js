@@ -24,7 +24,7 @@ describe('Geonames - countryList', function () {
      * the final test on this file shows also just sinon without the extra s-j assertions
      */
 
-    describe('API Of Module', function () {
+    describe('Contracts (API)', function () {
 
         /**
          * VERSION 1: Mocking out the gateway manually
@@ -84,7 +84,7 @@ describe('Geonames - countryList', function () {
         });
     });
 
-    describe('Entity From API', function () {
+    describe('Entity Manipulation', function () {
         /**
          * We know that this should set the countriesEntity
          *
@@ -106,7 +106,7 @@ describe('Geonames - countryList', function () {
          *     so we don't really need to do it here, we just need to make sure
          *     that the resolve from the gateway's promise sets the entity!
          */
-        xit('should set the countriesEntity to array from countryInfoJSON', function () {
+        xit('should set the countriesEntity from countryInfoJSON', function () {
             inject(function( countriesEntity, countryListRequest, $httpBackend ){
                 var data = { geonames: [] };
                 $httpBackend.whenGET(/^http\S*countryInfoJSON/).respond(200, data);
@@ -127,7 +127,7 @@ describe('Geonames - countryList', function () {
          * this is very verbose and complicated
          * but it is making sure that the gateway's resolve is used to set the entity
          */
-        xit('should set the countriesEntity to array from gateway call', function () {
+        xit('should set the countriesEntity from gateway call', function () {
             var def, data = { geonames: []};
             module(function($provide){
                 $provide.factory('gateway', function($q){
@@ -156,7 +156,7 @@ describe('Geonames - countryList', function () {
          *
          * this is still very verbose, testing the success callback is just a pain!
          */
-        xit('should set the countriesEntity to array from gateway call', function () {
+        xit('should set the countriesEntity from gateway call', function () {
             var data = { geonames: []},
                 successFn,
                 gatewayStub = sinon.stub().returns({
@@ -180,7 +180,7 @@ describe('Geonames - countryList', function () {
          * 
          * this is a slight improvement as we have a simple stub now
          */
-        it('should set the countriesEntity to array from gateway call', function () {
+        it('should set the countriesEntity from gateway call', function () {
             var data = { geonames: [] },
                 successSpy = sinon.spy();
             module(function($provide){
