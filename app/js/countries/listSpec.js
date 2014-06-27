@@ -31,7 +31,7 @@ describe('Application - List Route', function () {
         });
     });
 
-    ddescribe('Controller', function () {
+    describe('Controller', function () {
         var ctrl, scope;
         beforeEach(inject(function($controller, $rootScope){
             scope = $rootScope.$new();

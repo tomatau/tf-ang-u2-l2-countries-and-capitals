@@ -48,6 +48,8 @@ module.exports = function(config) {
       './app/js/intro/introSpec.js',
       './app/js/countries/list.js',
       './app/js/countries/listSpec.js',
+      './app/js/countries/country.js',
+      './app/js/countries/countrySpec.js',
     ],
 
 

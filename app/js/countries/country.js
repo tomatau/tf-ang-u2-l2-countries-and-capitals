@@ -17,7 +17,8 @@ angular.module('ccApp')
             }
         })
     })
-    .controller('CountryCtrl', function($scope, country, $interpolate, FLAG, MAP, COUNTRYURL){
+    .controller('CountryCtrl', 
+            function($scope, country, $interpolate, FLAG, MAP, COUNTRYURL){
         $scope.country = country;
         function goTo(url, countryCode){
             return $interpolate(url)({ code: countryCode });
