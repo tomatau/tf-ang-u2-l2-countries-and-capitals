@@ -144,7 +144,7 @@ describe('Geonames - countryRepo', function () {
                         expect(countryEntity).toEqual(countryEntity)
                     });
                 $rootScope.$apply(function(){ // $q resolve needs to be digested
-                    countryListReqStub.resolve({ countryCode: countryCode });
+                    countryListReqStub.resolve(); // we've stubbed the Entity already
                     capitalRequestStub.resolve({ geonames: [ countryEntity.capitalData ] });
                     neighborsListRequestStub.resolve({ geonames: [ countryEntity.capitalData ] });
                 });
