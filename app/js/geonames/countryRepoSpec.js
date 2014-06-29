@@ -1,10 +1,6 @@
 describe('Geonames - countryRepo', function () {
     var countryCode = "ABC",
-        countryEntity = {
-            countryCode: countryCode,
-            capitalData: { value: 'capital'},
-            neighbors: []
-        };
+        countryEntity;
 
     beforeEach(module("geonames"));
 
@@ -20,7 +16,9 @@ describe('Geonames - countryRepo', function () {
     // so we want to make stubs that adhere to the $http promise...
     // angular makes this painful unfortunately so... this simple test is super complex
     beforeEach(function () {
-
+        countryEntity = {
+            countryCode: countryCode
+        };
         module(function($provide){
             $provide.factory('countryListRequest', function(){
                 return function(){ return countryListReqStub.promise; }
@@ -139,14 +137,18 @@ describe('Geonames - countryRepo', function () {
          */
         it('should add capitalData and neighbors to the countryEntity', function () {
             inject(function( countryRepo, $rootScope ){
+                var capitalData = { value: 'capital'},
+                    neighbors = [];
+                
                 countryRepo(countryCode)
-                    .then(function(countryEntity){
-                        expect(countryEntity).toEqual(countryEntity)
-                    });
+                    .then(function(country){
+                        expect(country).toBe(countryEntity)
+                    })
+
                 $rootScope.$apply(function(){ // $q resolve needs to be digested
                     countryListReqStub.resolve(); // we've stubbed the Entity already
-                    capitalRequestStub.resolve({ geonames: [ countryEntity.capitalData ] });
-                    neighborsListRequestStub.resolve({ geonames: [ countryEntity.capitalData ] });
+                    capitalRequestStub.resolve({ geonames: [ capitalData ] }); // pops
+                    neighborsListRequestStub.resolve({ geonames: neighbors });
                 });
             });
         });

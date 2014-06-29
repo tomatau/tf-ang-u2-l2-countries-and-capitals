@@ -1,18 +1,32 @@
 describe('Geonames - countryList', function () {
-    // this is internal to the implementation
-    // possibly a bad idea but we need to stub something to make the tests pass
-    //  alternatively stub the httpRequest but then changing the gateway could break
-    //  these tests...
+    // the problem:
+    // this component never uses the $http request directly, it uses the gateway.
+    // 
+    // but where the draw the line between implamentation and requirements
+    // even to test purely behaviour, using other components means we must make stubbing decisions.
+    // It's possibly a bad idea to stub the gateway, as it's complex...
+    // 
+    // HOWEVER.
+    // we have tested the gateway and it's being used a lot.
+    // the gateway's tests make sure the http happens correctly already,
+    // so.. using thie stub gives us freedom to change things! and, once the stubbing is done, the tests end up being not too bad.
+    // ALSO.
+    // if we don't stub the gateway and then change the gateway, 
+    //  it could break this spec, when this spec isn't testing the gateway
+
     var gatewayStub = sinon.stub().returns( { success: function(){} } );
+    // The problem still remains that we're coupling ourselves to the gateway here 
+
+    // and on the flip side, it could be of 'most importance' to your business plan
+    // for the request to use http...
 
     // CONCLUSION:
     // We need to use both the http request in the tests as well as the gateway
     // because the gateway makes the request
     // so.. to avoid completely coupling ourselves to both of these implementation facts
-    // we can.. make some tests mock stub gateway and some stub the request
+    // we can.. make most tests stub the gateway, and some stub the request
     // this way we have only coupled part of the test suite to each
     // taking control of the situation and giving explicit parts
-
     beforeEach(module("geonames"));
 
     afterEach(function () {
@@ -49,12 +63,12 @@ describe('Geonames - countryList', function () {
          *
          * Nice, although: this is tieing us to the implementation that makes a httpRequest
          *     the gateway is another unit and shouldn't affect this test..
-         *         the gateway is used by the countryList and now changing the gateway
-         *         will potentially break this test
-         *         The gateway is another important module we use a lot
-         *             it has agreed to give us a success method in it's API
-         *             it never agreed to make a httpRequest, it might use localStorage...
-         *     We can't see that impl from here in this test but we're not stubbing it out
+         *     the gateway is used by the countryList and now changing the gateway
+         *     will potentially break this test
+         *     The gateway is another important module we use a lot
+         *         it has agreed to give us a success method in it's API
+         *         it never agreed to make a httpRequest, it might use localStorage, etc.
+         * This test is risky, we aren't protecting ourselves against the gateway
          */
         xit('should return a deferred object', function () {
             inject(function (countryListRequest, $q, $httpBackend) {
@@ -162,7 +176,8 @@ describe('Geonames - countryList', function () {
                 gatewayStub = sinon.stub().returns({
                     success: function(fn){
                         successFn = fn;
-                    } });
+                    }
+                });
             module(function($provide){
                 $provide.factory('gateway', function(){ return gatewayStub; });
             });
