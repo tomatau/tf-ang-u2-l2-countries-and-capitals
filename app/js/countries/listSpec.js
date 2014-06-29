@@ -20,10 +20,13 @@ describe('Application - List Route', function () {
             inject(function($route, $rootScope, $location, $httpBackend) {
                 var templateReg = /list\.html$/;
                 $httpBackend.when('GET', templateReg).respond("...");
-
+                // act
                 $rootScope.$apply(function() {
                     $location.path('/countries');
                 });
+                $httpBackend.flush();
+                $httpBackend.verifyNoOutstandingRequest();
+                // assert
                 expect($route.current.templateUrl).toMatch(templateReg)
                 expect($route.current.controller).toBe('ListCtrl')
                 expect(countryListRequestStub).toHaveBeenCalled();
@@ -50,7 +53,7 @@ describe('Application - List Route', function () {
             inject(function($location, $rootScope){
                 var testCode = "Code";
                 scope.goToCountry(testCode);
-                $rootScope.$digest();
+                $rootScope.$digest();// similar to wrapping in apply, but quicker
                 expect($location.path()).toEqual('/someURL' + testCode);
             })
         });

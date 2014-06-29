@@ -4,23 +4,21 @@ describe('Geonames - neighborsList', function () {
 
     beforeEach(module("geonames"));
 
-    afterEach(function () {
-        gatewayStub.reset();
-    });
+    afterEach(function () { gatewayStub.reset(); });
 
-    it('should return a the gateway promise object', function () {
+    beforeEach(function () {
         module(function($provide){
             $provide.factory('gateway', function(){ return gatewayStub; });
         });
+    });
+
+    it('should return a the gateway promise object', function () {
         inject(function ( neighborsListRequest, gateway ) {
             expect(neighborsListRequest(countryEntity)).toImplement( gateway() );
         })
     });
 
     it('should send geonameId params to gateway request', function () {
-        module(function($provide){
-            $provide.factory('gateway', function(){ return gatewayStub; });
-        });
         inject(function( neighborsListRequest, NEIGHBOURS ){
             var expectedParams = { geonameId: countryEntity.geonameId };
             neighborsListRequest(countryEntity);

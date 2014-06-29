@@ -5,10 +5,10 @@ describe('Geonames - gateway', function () {
 
     /*
     This file splits into 3 sections:
-     - constants: a bunch of URL strings the API expects this gateway to provide
+     - constants: a bunch of URL strings from the geonames API
      - the second section 'contracts' describes any agreements the gateway is making
-        with other files that uses it.. kinda like a public api
-     - third section http gateway describes the specific http functionality it needs to perform
+        with other files that uses it.. kinda like a private api
+     - third section 'http gateway' describes the specific http functionality
      */
 
     describe('Constants', function () {
@@ -16,8 +16,8 @@ describe('Geonames - gateway', function () {
             inject(function (GEOAPI, GEOURL, FLAG, MAP) {
                 expect(GEOAPI).toStartWith('http'); // could be https still
                 expect(GEOURL).toStartWith('http');
-                // maybe checking for image type (regex)
-                // but then we'll need to keep manually adding possible extensions
+                // maybe checking for image file types using regex
+                // but then we'll need to keep manually adding possible fo;e extensions
                 //  that could be a good thing
                 expect(FLAG).toBeNonEmptyString();
                 expect(MAP).toBeNonEmptyString();
@@ -28,20 +28,20 @@ describe('Geonames - gateway', function () {
     /**
      * Contracts
      *
-     * tests that certain 'intefaces' are implemented 
-     * that will be expected by other components using the gateway
+     * implementation of interfaces 
      */
-    describe('Contracts (API)', function () {
-        it('should return a promise', function () {
+    describe('Contracts (Private API)', function () {
+        xit('should return a promise', function () {
             inject(function( gateway, $httpBackend, $q ){
                 $httpBackend.expectGET(/test\.url/).respond(200);
-                expect(gateway(url)).toImplement($q.defer().promise)
+                expect(gateway(url)).toImplement($q.defer().promise);
+                // if you're expecting _any_ http to happen, check it was what you expected
                 $httpBackend.flush();
                 $httpBackend.verifyNoOutstandingRequest();
             })
         });
 
-        it('should add success and error functions to the returned promise', function () {
+        xit('should add success and error functions to the returned promise', function () {
             inject(function( gateway, $httpBackend ){
                 var contract = {
                     success: function(){},
@@ -53,13 +53,38 @@ describe('Geonames - gateway', function () {
                 $httpBackend.verifyNoOutstandingRequest();
             });
         });
+
+        // Refactor, can just test it implements http instead of previous 2
+        // have to make a request as the $http prototype doesn't expose the promise api
+        it('should do what...', function (done) {
+            inject(function( gateway, $httpBackend, $http ){
+                $httpBackend.expectGET(/test\.url/).respond(200); // gateway on url
+                $httpBackend.expectGET('').respond(200); // http on url
+                expect(gateway(url)).toImplement($http.get(''));
+                $httpBackend.flush();
+                $httpBackend.verifyNoOutstandingRequest();
+            });
+        });
     });
 
-    // this implementation is specifically HTTP but our app shouldn't care
-    //  maybe it could care at a congig stage but only need to include the word HTTPGateway
-    //  Once .
+    /*
+        The Purpose of the Gateway in this application is to provide a single boundary,
+        this gateway is also for HTTP, so it might be more suited with the name: HttpGateway
+        but that would be an overkill right now.
+
+        i.e. when this app communicates with the geonames API, it does it in one place, the gateway
+
+        .: The gateway can be extended to add features for other data stores or swapped
+            it just needs to keep to it's contracts (promise + success and error)
+
+        So in the future, we might have a localStorageGateway or a WebSQL Gateway, maybe a
+        CORS or an RPCgateway, PostMessageGateway, etc.. this could easily be swapped in;
+        all we would need to do is:
+             $provite.factory('gateway', function() { return RPCGateway; });
+     */
+
+    // Tests for the HTTP implementation
     describe('HTTP Gateway', function () {
-        // this could easily change, localStorage, WebSQL, IndexedDB
         it('should perform GET request to URL with format and username', function () {
             inject(function($httpBackend, gateway){
                 $httpBackend.expectGET(/test\.url/).respond(200);
@@ -69,17 +94,11 @@ describe('Geonames - gateway', function () {
             })
         });
 
-        // maybe don't need any of these... making sure we use HTTP
-        //  support that's the current impl here
-        //  
-        //  On a side note:
-        //  in the app config stage we could provide 'gateway' to be this (httpGateway)
-        //  
+
+        // The $http arguments tests are potentially all not needed.
+        // 
+        // We could suvive without them IMO
         describe('$http arguments', function () {
-            // not sure about this... lots of internals
-            //  especially 
-            // these could be important though, depends!
-            // could just check that an object includes
             var url = "test.url";
 
             /**
@@ -89,16 +108,15 @@ describe('Geonames - gateway', function () {
              * but we can trust $http to require this implementation anyway
              */
             it('should accept params for the request', function () {
-                // unfortunately our stub needs to meet the promise requirements
-                //  could be worth making a test helper function to 'make promise stub'
-                var $httpStub = sinon.stub().returns({error: function(){}});
+                // should really stub $http but our gateway http req only needs 'error()'
+                var $httpStub = sinon.stub().returns( { error: function(){} } );
+                //  could be worth making a test helper function to 'makePromiseStub()'
                 module(function($provide){
                     $provide.factory('$http', function(){ return $httpStub; });
                 })
                 inject(function(gateway){
                     var params = { extra: "extra param" };
                     gateway(url, params);
-                    // save the params, we know it's an object with a params key
                     expect( $httpStub.getCall(0).args[0].params.extra )
                         .toBe( params.extra )
                 })
@@ -107,12 +125,15 @@ describe('Geonames - gateway', function () {
             /**
              * VERSION 2: Manually stub out the http to inspect the full options structure
              *
-             * Very verbose, it also depends quite a lot on the options implamentation
+             * Very verbose, it also depends quite a lot on the options choices,
+             * version 1 works very similarly and again we coulc combine the two techniques
              *
              * This could be good or bad as we might wanna enforce GET and cache
              *     as well as the default params (formatted and username)
              *
-             * We could combine version 1 and version 2 if necessary
+             * We could combine version 1 and version 2 if necessary: 
+             *     - either method of stubbing
+             *     - either method of assertion
              */
             xit('should accept params for the request', function () {
                 var defaultOptions = {
@@ -129,9 +150,7 @@ describe('Geonames - gateway', function () {
                         var $http = function(args){
                             $http.call = jasmine.createSpy('$http');
                             $http.call(args);
-                            return {
-                                error: function(){}
-                            }
+                            return {  error: function(){} };
                         }
                         return $http;
                     });

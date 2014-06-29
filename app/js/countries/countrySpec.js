@@ -14,14 +14,17 @@ describe('Application - Country Route', function () {
             });
         });
 
-        it('should load the country template', function () {
+        it('should load the country template and controller', function () {
             inject(function($route, $rootScope, $location, $httpBackend) {
                 var templateReg = /country\.html$/;
                 $httpBackend.when('GET', templateReg).respond("...");
-
+                // act
                 $rootScope.$apply(function() {
                     $location.path('/countries/' + countryCode + '/capital');
                 });
+                $httpBackend.flush();
+                $httpBackend.verifyNoOutstandingRequest();
+                // assert
                 expect($route.current.templateUrl).toMatch(templateReg)
                 expect($route.current.controller).toBe('CountryCtrl')
                 expect(countryRepoStub).toHaveBeenCalled();
@@ -46,7 +49,7 @@ describe('Application - Country Route', function () {
             expect(scope.country).toBe( countryEntity );
         });
 
-        it('should provide methods for each URL', function () {
+        it('should provide methods for each URL using filter syntax', function () {
             expect(scope.flagUrl(countryCode))
                 .toEqual('FLAGURL' + countryCode.toLowerCase());
             expect(scope.mapUrl(countryCode))

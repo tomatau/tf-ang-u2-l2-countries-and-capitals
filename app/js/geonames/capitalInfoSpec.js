@@ -6,24 +6,22 @@ describe('Geonames - capitalInfo', function () {
     };
 
     beforeEach(module("geonames"));
+    afterEach(function () { gatewayStub.reset(); });
 
-    afterEach(function () {
-        gatewayStub.reset();
-    });
-
-    it('should return a the gateway promise object', function () {
+    beforeEach(function () {
         module(function($provide){
             $provide.factory('gateway', function(){ return gatewayStub; });
         });
+    });
+
+
+    it('should return a the gateway promise object', function () {
         inject(function ( capitalRequest, gateway ) {
             expect(capitalRequest(countryEntity)).toImplement( gateway() );
         })
     });
 
     it('should send appropriate params to gateway request', function () {
-        module(function($provide){
-            $provide.factory('gateway', function(){ return gatewayStub; });
-        });
         inject(function( capitalRequest, CAPITALINFO ){
             var expectedParams = {
                 country: countryEntity.countryCode,

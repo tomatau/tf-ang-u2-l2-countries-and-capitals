@@ -21,16 +21,21 @@ describe('Application - main', function () {
 
     it('should set loading false eventually on routeChangeSuccess', function () {
         inject(function($rootScope, $timeout){
+            // we know that this sets true from previous test
             $rootScope.$broadcast('$routeChangeStart', {});
 
+            // run blocks specify some code triggering asycn events
             runs(function() {
                 $rootScope.$broadcast('$routeChangeSuccess', {});
                 $timeout.flush()
             });
             
+            // poll for a duration with assertion
             waitsFor(function(){
                 return ($rootScope.isLoading === false)
             }, "isLoading should be false on routeChangeSuccess", 400);
+            
+            // optional final assertion
             // runs(function(){ expect($rootScope.isLoading).toEqual(false); })
         })
     });

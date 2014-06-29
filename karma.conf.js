@@ -20,7 +20,8 @@ module.exports = function(config) {
       // testing libraries
       './node_modules/jasmine-expect/dist/jasmine-matchers.js',
       './node_modules/sinon-browser-only/sinon.js',
-      './node_modules/jasmine-sinon/lib/jasmine-sinon.js', // USE 0.3.x for old jasmine LOL
+      // USE 0.3.x for jasmine 1.3
+      './node_modules/jasmine-sinon/lib/jasmine-sinon.js',
 
       // angular
       './bower_components/angular/angular.js',

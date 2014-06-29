@@ -1,13 +1,16 @@
 angular.module('geonames')
     .factory('countryRepo', 
-        function( countryListRequest, capitalDataDecorator, neighborsDecorator ){
+        function( countryListRequest, capitalDataDecorator, neighborsDecorator, countriesEntity ){
             return function countryRepo(countryCode) {
                 return countryListRequest()
                     .then(function(){
-                        return capitalDataDecorator(countryCode);
+                        return countriesEntity.find(countryCode);
                     })
-                    .then(function(){
-                        return neighborsDecorator(countryCode);
+                    .then(function(country){
+                        return capitalDataDecorator(country);
+                    })
+                    .then(function(country){
+                        return neighborsDecorator(country);
                     });
             }
         }
@@ -15,12 +18,10 @@ angular.module('geonames')
     // these two decorators are currently only internal to this reop
     // but they are built in such a way they could be extracted and reused easily
     .factory('capitalDataDecorator',
-        function( capitalRequest, $q, countriesEntity ){
-            return function capitalDataDecorator(countryCode){
-                var def = $q.defer(),
-                    country = countriesEntity.find(countryCode);
+        function( capitalRequest, $q ){
+            return function capitalDataDecorator(country){
+                var def = $q.defer();
                 if (country == null) throw Error('Country not found');
-
                 capitalRequest(country)
                     .success(function(data){
                         def.resolve(
@@ -34,12 +35,10 @@ angular.module('geonames')
         }
     )
     .factory('neighborsDecorator', 
-        function(neighborsListRequest, $q, countriesEntity){
-            return function neighborsDecorator(countryCode){
-                var def = $q.defer(),
-                    country = countriesEntity.find(countryCode);
+        function(neighborsListRequest, $q){
+            return function neighborsDecorator(country){
+                var def = $q.defer();
                 if (country == null) throw Error('Country not found');
-
                 neighborsListRequest(country)
                     .success(function(data){
                         def.resolve(
