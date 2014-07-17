@@ -108,7 +108,7 @@ describe('Geonames - countryRepo', function () {
         // this repo uses 3 request services and so we have to do a lot of stubbing
         //      see the top level beforeEach o_O
         // 
-        it('should return the a promise interface', function () {
+        it('should return the a `http` promise interface', function () {
             inject(function ( countryRepo, countryListRequest, $q ) {
                 expect(countryRepo(countryCode)).toImplement( $q.defer().promise );
             });

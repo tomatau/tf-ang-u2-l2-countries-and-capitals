@@ -2,6 +2,7 @@ angular.module('geonames')
     .factory('countryRepo', 
         function( countryListRequest, capitalDataDecorator, neighborsDecorator, countriesEntity ){
             return function countryRepo(countryCode) {
+                // convert to 'all' call
                 return countryListRequest()
                     .then(function(){
                         return countriesEntity.find(countryCode);
