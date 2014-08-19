@@ -1,17 +1,22 @@
 angular.module('geonames')
     .factory('countryRepo', 
-        function( countryListRequest, capitalDataDecorator, neighborsDecorator, countriesEntity ){
+        function( 
+            countryListRequest, 
+            capitalDataDecorator, 
+            neighborsDecorator, 
+            countriesEntity,
+            $q
+        ){
             return function countryRepo(countryCode) {
                 // convert to 'all' call
                 return countryListRequest()
                     .then(function(){
-                        return countriesEntity.find(countryCode);
-                    })
-                    .then(function(country){
-                        return capitalDataDecorator(country);
-                    })
-                    .then(function(country){
-                        return neighborsDecorator(country);
+                        var country = countriesEntity.find(countryCode);
+                        return $q.all([
+                            capitalDataDecorator(country), neighborsDecorator(country)
+                        ]).then(function () {
+                            return country;
+                        });
                     });
             }
         }
